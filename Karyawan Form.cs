@@ -21,7 +21,7 @@ namespace Hotel_App
 
         private void Karyawan_Form_Load(object sender, EventArgs e)
         {
-            func.ReadData("SELECT nama Nama, username Username, role Peran FROM user, password Password", dgv_Karyawan);
+            func.ReadData("SELECT nama Nama, username Username, role Peran, password Password FROM user", dgv_Karyawan);
         }
 
         private void dgv_Karyawan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -31,8 +31,7 @@ namespace Hotel_App
                 DataGridViewRow row = this.dgv_Karyawan.Rows[e.RowIndex];
                 txt_Nama.Text = row.Cells[0].Value.ToString();
                 txt_Username.Text = row.Cells[1].Value.ToString();
-                txt_P.Text = row.Cells[2].Value.ToString();
-                txb_handphone.Text = row.Cells[3].Value.ToString();
+                txt_Password.Text = row.Cells[2].Value.ToString();
             }
         }
     }

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.txt_Nama = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txt_Username = new System.Windows.Forms.TextBox();
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.dgv_Karyawan = new System.Windows.Forms.DataGridView();
-            this.btn_Insert = new System.Windows.Forms.Button();
-            this.btn_Update = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Update = new System.Windows.Forms.Button();
+            this.btn_Insert = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Karyawan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,20 +50,10 @@
             this.txt_Nama.Size = new System.Drawing.Size(284, 26);
             this.txt_Nama.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Data Karyawan";
-            // 
             // txt_Username
             // 
             this.txt_Username.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Username.Location = new System.Drawing.Point(32, 226);
+            this.txt_Username.Location = new System.Drawing.Point(32, 212);
             this.txt_Username.Name = "txt_Username";
             this.txt_Username.Size = new System.Drawing.Size(284, 26);
             this.txt_Username.TabIndex = 2;
@@ -71,7 +61,7 @@
             // txt_Password
             // 
             this.txt_Password.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Password.Location = new System.Drawing.Point(413, 134);
+            this.txt_Password.Location = new System.Drawing.Point(32, 290);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(284, 26);
             this.txt_Password.TabIndex = 3;
@@ -80,55 +70,13 @@
             // 
             this.dgv_Karyawan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_Karyawan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Karyawan.Location = new System.Drawing.Point(12, 314);
+            this.dgv_Karyawan.Location = new System.Drawing.Point(471, 108);
             this.dgv_Karyawan.Name = "dgv_Karyawan";
             this.dgv_Karyawan.RowHeadersWidth = 62;
             this.dgv_Karyawan.RowTemplate.Height = 28;
-            this.dgv_Karyawan.Size = new System.Drawing.Size(685, 197);
+            this.dgv_Karyawan.Size = new System.Drawing.Size(383, 377);
             this.dgv_Karyawan.TabIndex = 5;
             this.dgv_Karyawan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Karyawan_CellDoubleClick);
-            // 
-            // btn_Insert
-            // 
-            this.btn_Insert.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btn_Insert.FlatAppearance.BorderSize = 0;
-            this.btn_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Insert.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Insert.Location = new System.Drawing.Point(718, 314);
-            this.btn_Insert.Name = "btn_Insert";
-            this.btn_Insert.Size = new System.Drawing.Size(136, 55);
-            this.btn_Insert.TabIndex = 6;
-            this.btn_Insert.Text = "Tambah";
-            this.btn_Insert.UseVisualStyleBackColor = false;
-            // 
-            // btn_Update
-            // 
-            this.btn_Update.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btn_Update.FlatAppearance.BorderSize = 0;
-            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Update.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Update.Location = new System.Drawing.Point(718, 386);
-            this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(136, 55);
-            this.btn_Update.TabIndex = 7;
-            this.btn_Update.Text = "Ubah";
-            this.btn_Update.UseVisualStyleBackColor = false;
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btn_Delete.FlatAppearance.BorderSize = 0;
-            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Delete.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Delete.Location = new System.Drawing.Point(718, 456);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(136, 55);
-            this.btn_Delete.TabIndex = 8;
-            this.btn_Delete.Text = "Hapus";
-            this.btn_Delete.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -144,7 +92,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 203);
+            this.label3.Location = new System.Drawing.Point(32, 189);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 10;
@@ -154,11 +102,79 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(417, 111);
+            this.label4.Location = new System.Drawing.Point(36, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 11;
             this.label4.Text = "Password";
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Delete.FlatAppearance.BorderSize = 0;
+            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Delete.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Delete.Image = global::Hotel_App.Properties.Resources.delete;
+            this.btn_Delete.Location = new System.Drawing.Point(300, 420);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(136, 55);
+            this.btn_Delete.TabIndex = 8;
+            this.btn_Delete.Text = "   Hapus";
+            this.btn_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_Update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Update.FlatAppearance.BorderSize = 0;
+            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Update.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Update.Image = global::Hotel_App.Properties.Resources.edit;
+            this.btn_Update.Location = new System.Drawing.Point(158, 420);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(136, 55);
+            this.btn_Update.TabIndex = 7;
+            this.btn_Update.Text = "   Ubah";
+            this.btn_Update.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Update.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Update.UseVisualStyleBackColor = false;
+            // 
+            // btn_Insert
+            // 
+            this.btn_Insert.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_Insert.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Insert.FlatAppearance.BorderSize = 0;
+            this.btn_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Insert.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Insert.Image = global::Hotel_App.Properties.Resources.add;
+            this.btn_Insert.Location = new System.Drawing.Point(16, 420);
+            this.btn_Insert.Name = "btn_Insert";
+            this.btn_Insert.Size = new System.Drawing.Size(136, 55);
+            this.btn_Insert.TabIndex = 6;
+            this.btn_Insert.Text = "   Tambah";
+            this.btn_Insert.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Insert.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Insert.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = global::Hotel_App.Properties.Resources.employee;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(26, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(343, 75);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "         Data Karyawan";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Karyawan_Form
             // 
