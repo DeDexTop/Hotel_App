@@ -1,0 +1,41 @@
+C:\Project\Hotel App\obj\Debug\Hotel App.csproj.AssemblyReference.cache
+C:\Project\Hotel App\obj\Debug\Hotel App.csproj.SuggestedBindingRedirects.cache
+C:\Project\Hotel App\obj\Debug\Hotel_App.Admin_Form.resources
+C:\Project\Hotel App\obj\Debug\Hotel_App.Form1.resources
+C:\Project\Hotel App\obj\Debug\Hotel_App.Owner_Form.resources
+C:\Project\Hotel App\obj\Debug\Hotel_App.Properties.Resources.resources
+C:\Project\Hotel App\obj\Debug\Hotel App.csproj.GenerateResource.cache
+C:\Project\Hotel App\obj\Debug\Hotel App.csproj.CoreCompileInputs.cache
+C:\Project\Hotel App\bin\Debug\Hotel App.exe.config
+C:\Project\Hotel App\bin\Debug\Hotel App.exe
+C:\Project\Hotel App\bin\Debug\Hotel App.pdb
+C:\Project\Hotel App\bin\Debug\BouncyCastle.Crypto.dll
+C:\Project\Hotel App\bin\Debug\Google.Protobuf.dll
+C:\Project\Hotel App\bin\Debug\K4os.Compression.LZ4.dll
+C:\Project\Hotel App\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Project\Hotel App\bin\Debug\K4os.Hash.xxHash.dll
+C:\Project\Hotel App\bin\Debug\MySql.Data.dll
+C:\Project\Hotel App\bin\Debug\System.Buffers.dll
+C:\Project\Hotel App\bin\Debug\System.Memory.dll
+C:\Project\Hotel App\bin\Debug\System.Numerics.Vectors.dll
+C:\Project\Hotel App\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Project\Hotel App\bin\Debug\Ubiety.Dns.Core.dll
+C:\Project\Hotel App\bin\Debug\ZstdNet.dll
+C:\Project\Hotel App\bin\Debug\BouncyCastle.Crypto.xml
+C:\Project\Hotel App\bin\Debug\Google.Protobuf.pdb
+C:\Project\Hotel App\bin\Debug\Google.Protobuf.xml
+C:\Project\Hotel App\bin\Debug\K4os.Compression.LZ4.xml
+C:\Project\Hotel App\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Project\Hotel App\bin\Debug\K4os.Hash.xxHash.xml
+C:\Project\Hotel App\bin\Debug\MySql.Data.xml
+C:\Project\Hotel App\bin\Debug\System.Buffers.xml
+C:\Project\Hotel App\bin\Debug\System.Memory.xml
+C:\Project\Hotel App\bin\Debug\System.Numerics.Vectors.xml
+C:\Project\Hotel App\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Project\Hotel App\obj\Debug\Hotel App.csproj.CopyComplete
+C:\Project\Hotel App\obj\Debug\Hotel App.exe
+C:\Project\Hotel App\obj\Debug\Hotel App.pdb
+C:\Project\Hotel App\obj\Debug\Hotel_App.Log_Form.resources
+C:\Project\Hotel App\obj\Debug\Hotel_App.Kasir_Form.resources
+C:\Project\Hotel App\obj\Debug\Hotel_App.Karyawan_Form.resources
+C:\Project\Hotel App\obj\Debug\Hotel_App.Kamar_Form.resources
