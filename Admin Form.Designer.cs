@@ -29,38 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Form));
-            this.btnOpen = new System.Windows.Forms.Button();
             this.btnKaryawan = new System.Windows.Forms.Button();
-            this.btnLogs = new System.Windows.Forms.Button();
             this.btnKamar = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnOpen = new System.Windows.Forms.Button();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelMenu.SuspendLayout();
-            this.panelLogo.SuspendLayout();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.panelTitleBar.SuspendLayout();
             this.panelDesktop.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            this.panelMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnOpen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOpen.FlatAppearance.BorderSize = 0;
-            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpen.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.Image")));
-            this.btnOpen.Location = new System.Drawing.Point(23, 15);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(62, 48);
-            this.btnOpen.TabIndex = 1;
-            this.btnOpen.UseVisualStyleBackColor = false;
-            this.btnOpen.Visible = false;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // btnKaryawan
             // 
@@ -83,27 +67,6 @@
             this.btnKaryawan.UseVisualStyleBackColor = true;
             this.btnKaryawan.Click += new System.EventHandler(this.btnKaryawan_Click);
             // 
-            // btnLogs
-            // 
-            this.btnLogs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogs.FlatAppearance.BorderSize = 0;
-            this.btnLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogs.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLogs.Image = ((System.Drawing.Image)(resources.GetObject("btnLogs.Image")));
-            this.btnLogs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogs.Location = new System.Drawing.Point(0, 202);
-            this.btnLogs.Name = "btnLogs";
-            this.btnLogs.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnLogs.Size = new System.Drawing.Size(244, 60);
-            this.btnLogs.TabIndex = 4;
-            this.btnLogs.Text = "   Aktivitas";
-            this.btnLogs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogs.UseVisualStyleBackColor = true;
-            this.btnLogs.Click += new System.EventHandler(this.btnLogs_Click);
-            // 
             // btnKamar
             // 
             this.btnKamar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -125,19 +88,6 @@
             this.btnKamar.UseVisualStyleBackColor = true;
             this.btnKamar.Click += new System.EventHandler(this.btnKamar_Click);
             // 
-            // buttonClose
-            // 
-            this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonClose.FlatAppearance.BorderSize = 0;
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
-            this.buttonClose.Location = new System.Drawing.Point(12, 15);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(52, 48);
-            this.buttonClose.TabIndex = 0;
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -150,18 +100,50 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin";
             // 
-            // panelMenu
+            // panelTitleBar
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.btnLogs);
-            this.panelMenu.Controls.Add(this.btnKamar);
-            this.panelMenu.Controls.Add(this.btnKaryawan);
-            this.panelMenu.Controls.Add(this.panelLogo);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(244, 654);
-            this.panelMenu.TabIndex = 3;
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelTitleBar.Controls.Add(this.btnOpen);
+            this.panelTitleBar.Controls.Add(this.label1);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(244, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(978, 82);
+            this.panelTitleBar.TabIndex = 4;
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnOpen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpen.FlatAppearance.BorderSize = 0;
+            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpen.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.Image")));
+            this.btnOpen.Location = new System.Drawing.Point(23, 15);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(62, 48);
+            this.btnOpen.TabIndex = 1;
+            this.btnOpen.UseVisualStyleBackColor = false;
+            this.btnOpen.Visible = false;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Controls.Add(this.label3);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(244, 82);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(978, 572);
+            this.panelDesktop.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label3.Location = new System.Drawing.Point(33, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(437, 37);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Selamat Datang Admin name";
             // 
             // panelLogo
             // 
@@ -183,35 +165,30 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "MENU";
             // 
-            // panelTitleBar
+            // buttonClose
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelTitleBar.Controls.Add(this.btnOpen);
-            this.panelTitleBar.Controls.Add(this.label1);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(244, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(978, 82);
-            this.panelTitleBar.TabIndex = 4;
+            this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
+            this.buttonClose.Location = new System.Drawing.Point(12, 15);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(52, 48);
+            this.buttonClose.TabIndex = 0;
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // panelDesktop
+            // panelMenu
             // 
-            this.panelDesktop.Controls.Add(this.label3);
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(244, 82);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(978, 572);
-            this.panelDesktop.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label3.Location = new System.Drawing.Point(33, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(437, 37);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Selamat Datang Admin name";
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnKamar);
+            this.panelMenu.Controls.Add(this.btnKaryawan);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(244, 654);
+            this.panelMenu.TabIndex = 3;
             // 
             // Admin_Form
             // 
@@ -228,30 +205,28 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Form";
             this.Load += new System.EventHandler(this.Admin_Form_Load);
-            this.panelMenu.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnKaryawan;
-        private System.Windows.Forms.Button btnLogs;
         private System.Windows.Forms.Button btnKamar;
-        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Panel panelMenu;
     }
 }

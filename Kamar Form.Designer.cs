@@ -39,8 +39,8 @@
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Insert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_Gambar = new System.Windows.Forms.TextBox();
-            this.txt_Id = new System.Windows.Forms.TextBox();
+            this.label_id = new System.Windows.Forms.Label();
+            this.label_gambar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Kamar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Kamar)).BeginInit();
             this.SuspendLayout();
@@ -187,28 +187,33 @@
             this.label1.Text = "         Data Tipe Kamar";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txt_Gambar
+            // label_id
             // 
-            this.txt_Gambar.Location = new System.Drawing.Point(634, 40);
-            this.txt_Gambar.Name = "txt_Gambar";
-            this.txt_Gambar.Size = new System.Drawing.Size(220, 26);
-            this.txt_Gambar.TabIndex = 14;
-            this.txt_Gambar.Visible = false;
+            this.label_id.AutoSize = true;
+            this.label_id.Location = new System.Drawing.Point(580, 41);
+            this.label_id.Name = "label_id";
+            this.label_id.Size = new System.Drawing.Size(21, 20);
+            this.label_id.TabIndex = 14;
+            this.label_id.Text = "id";
+            this.label_id.Visible = false;
             // 
-            // txt_Id
+            // label_gambar
             // 
-            this.txt_Id.Location = new System.Drawing.Point(545, 40);
-            this.txt_Id.Name = "txt_Id";
-            this.txt_Id.Size = new System.Drawing.Size(67, 26);
-            this.txt_Id.TabIndex = 15;
+            this.label_gambar.AutoSize = true;
+            this.label_gambar.Location = new System.Drawing.Point(672, 41);
+            this.label_gambar.Name = "label_gambar";
+            this.label_gambar.Size = new System.Drawing.Size(63, 20);
+            this.label_gambar.TabIndex = 15;
+            this.label_gambar.Text = "gambar";
+            this.label_gambar.Visible = false;
             // 
             // Kamar_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 523);
-            this.Controls.Add(this.txt_Id);
-            this.Controls.Add(this.txt_Gambar);
+            this.Controls.Add(this.label_gambar);
+            this.Controls.Add(this.label_id);
             this.Controls.Add(this.btn_SearchImage);
             this.Controls.Add(this.pb_Kamar);
             this.Controls.Add(this.btn_Delete);
@@ -243,7 +248,7 @@
         private System.Windows.Forms.Button btn_Insert;
         private System.Windows.Forms.PictureBox pb_Kamar;
         private System.Windows.Forms.Button btn_SearchImage;
-        private System.Windows.Forms.TextBox txt_Gambar;
-        private System.Windows.Forms.TextBox txt_Id;
+        private System.Windows.Forms.Label label_id;
+        private System.Windows.Forms.Label label_gambar;
     }
 }

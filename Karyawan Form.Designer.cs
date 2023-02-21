@@ -70,11 +70,11 @@
             // 
             this.dgv_Karyawan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_Karyawan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Karyawan.Location = new System.Drawing.Point(471, 108);
+            this.dgv_Karyawan.Location = new System.Drawing.Point(471, 95);
             this.dgv_Karyawan.Name = "dgv_Karyawan";
             this.dgv_Karyawan.RowHeadersWidth = 62;
             this.dgv_Karyawan.RowTemplate.Height = 28;
-            this.dgv_Karyawan.Size = new System.Drawing.Size(383, 377);
+            this.dgv_Karyawan.Size = new System.Drawing.Size(383, 390);
             this.dgv_Karyawan.TabIndex = 5;
             this.dgv_Karyawan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Karyawan_CellDoubleClick);
             // 

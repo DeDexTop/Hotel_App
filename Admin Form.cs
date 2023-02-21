@@ -100,10 +100,5 @@ namespace Hotel_App
         {
             OpenChildForm(new Kamar_Form(), panelDesktop, sender);
         }
-
-        private void btnLogs_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Log_Form(), panelDesktop, sender);
-        }
     }
 }
