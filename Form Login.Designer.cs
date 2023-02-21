@@ -1,6 +1,6 @@
 ﻿namespace Hotel_App
 {
-    partial class Form1
+    partial class Form_Login
     {
         /// <summary>
         /// Required designer variable.
@@ -57,11 +57,12 @@
             // cb_Show
             // 
             this.cb_Show.AutoSize = true;
+            this.cb_Show.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_Show.Location = new System.Drawing.Point(273, 326);
             this.cb_Show.Name = "cb_Show";
-            this.cb_Show.Size = new System.Drawing.Size(75, 24);
+            this.cb_Show.Size = new System.Drawing.Size(152, 24);
             this.cb_Show.TabIndex = 12;
-            this.cb_Show.Text = "Show";
+            this.cb_Show.Text = "Tampilkan Sandi";
             this.cb_Show.UseVisualStyleBackColor = true;
             this.cb_Show.CheckedChanged += new System.EventHandler(this.cb_Show_CheckedChanged);
             // 
@@ -129,14 +130,14 @@
             this.txtUsername.Size = new System.Drawing.Size(265, 26);
             this.txtUsername.TabIndex = 6;
             // 
-            // Form1
+            // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form Login";
             this.panel1.ResumeLayout(false);

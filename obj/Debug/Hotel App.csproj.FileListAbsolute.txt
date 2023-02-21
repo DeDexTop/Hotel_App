@@ -1,7 +1,6 @@
 C:\Project\Hotel App\obj\Debug\Hotel App.csproj.AssemblyReference.cache
 C:\Project\Hotel App\obj\Debug\Hotel App.csproj.SuggestedBindingRedirects.cache
 C:\Project\Hotel App\obj\Debug\Hotel_App.Admin_Form.resources
-C:\Project\Hotel App\obj\Debug\Hotel_App.Form1.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Owner_Form.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Properties.Resources.resources
 C:\Project\Hotel App\obj\Debug\Hotel App.csproj.GenerateResource.cache
@@ -39,3 +38,4 @@ C:\Project\Hotel App\obj\Debug\Hotel_App.Log_Form.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Kasir_Form.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Karyawan_Form.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Kamar_Form.resources
+C:\Project\Hotel App\obj\Debug\Hotel_App.Form_Login.resources

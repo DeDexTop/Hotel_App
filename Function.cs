@@ -16,6 +16,7 @@ namespace Hotel_App
         public static string con = "Server=localhost;Database=hotel;user=root;Pwd= ;SslMode=none";
 
         MySqlConnection koneksi = new MySqlConnection(con);
+        private Form activateForm;
 
         public object ShowData(string query)
         {
@@ -71,6 +72,23 @@ namespace Hotel_App
             }
 
         }
+
+        public void OpenChildForm(Form childForm, Panel panel, object btnSender)
+        {
+            if (activateForm != null)
+            {
+                activateForm.Close();
+            }
+            activateForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel.Controls.Add(childForm);
+            panel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        
 
         public Color ChangeColorBrightness(Color color, double correctionFactor)
         {

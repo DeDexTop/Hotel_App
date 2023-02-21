@@ -27,11 +27,17 @@ namespace Hotel_App
             txt_Tipe.Text = string.Empty;
             txt_Harga.Text = string.Empty;
             pb_Kamar.Image = null;
+            Show();
+        }
+
+        new void Show()
+        {
+            func.ReadData("SELECT id No, tipe_kamar Tipe, harga_per_malam Harga, gambar Gambar FROM tb_kamar", dgv_Kamar);
         }
 
         private void Kamar_Form_Load(object sender, EventArgs e)
         {
-            func.ReadData("SELECT id No, tipe_kamar Tipe, harga_per_malam Harga, gambar Gambar FROM tb_kamar", dgv_Kamar);
+            Show();
             dgv_Kamar.Columns[3].Visible = false;
         }
 
@@ -79,7 +85,8 @@ namespace Hotel_App
                 if (dialogResult == DialogResult.Yes)
                 {
                     func.Command("INSERT INTO tb_kamar ('tipe_kamar', 'harga_per_malam', 'gambar') VALUES ('" + txt_Tipe.Text + "', '" + txt_Harga.Text + "', '" + label_gambar.Text + "')");
-                    MessageBox.Show("DataBerhasil Ditambahkan", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    func.Command("INSERT INTO log ('id_user', 'activity') VALUES ('" + ClassData.id_user + "', 'input data kamar')");
+                    MessageBox.Show("Data Berhasil Ditambahkan", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Refresh();
                 }
@@ -114,8 +121,9 @@ namespace Hotel_App
                 DialogResult dialogResult = MessageBox.Show("Apakah data yang di ubah sudah benar?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    func.Command("UPDATE tb_kamar SET tipe_kamar = '" + txt_Tipe.Text + "', harga_per_malam = '" + txt_Harga.Text + "', gambar = '" + label_gambar.Text + "' WHERE id = '" + label_id.Text + "'");
-                    MessageBox.Show("DataBerhasil Diubah", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    func.Command("UPDATE tb_kamar SET tipe_kamar = '" + txt_Tipe.Text + "', harga_per_malam = '" + txt_Harga.Text + "', gambar = '" + label_gambar.Text + "' WHERE id = '" + Convert.ToInt32(label_id.Text) + "'");
+                    func.Command("INSERT INTO log ('id_user', 'activity') VALUES ('" + ClassData.id_user + "', 'mengubah data kamar')");
+                    MessageBox.Show("Data Berhasil Diubah", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Refresh();
                 }
@@ -127,16 +135,22 @@ namespace Hotel_App
             DialogResult dialogResult = MessageBox.Show("Apakah anda yakin ingin menghapus data ini?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                func.Command("DELET FROM tb_kamar WHERE id = '" + label_id.Text + "'");
-                
+                func.Command("DELET FROM tb_kamar WHERE id = '" + Convert.ToInt32(label_id.Text) + "'");
+                func.Command("INSERT INTO log ('id_user', 'activity') VALUES ('" + ClassData.id_user + "', 'menghapus data kamar')");
+
                 //deleting image from folder
                 string newlocation = Path.GetDirectoryName(Application.ExecutablePath) + "\\assetes\\" + label_gambar.Text + ".png";
                 pb_Kamar.Image.Dispose();
                 File.Delete(newlocation);
-                MessageBox.Show("DataBerhasil Dihapus", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data Berhasil Dihapus", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Refresh();
             }
+        }
+
+        private void btn_Batal_Click(object sender, EventArgs e)
+        {
+            Refresh();
         }
     }
 }

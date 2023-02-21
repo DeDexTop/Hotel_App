@@ -16,5 +16,24 @@ namespace Hotel_App
         {
             InitializeComponent();
         }
+
+        Function func = new Function();
+
+        private void Kasir_Form_Load(object sender, EventArgs e)
+        {
+            func.OpenChildForm(new Kasir_Index(), panel_Desktop, sender);
+        }
+
+        private void btn_Tambah_Click(object sender, EventArgs e)
+        {
+            func.OpenChildForm(new Form_Transaksi(), panel_Desktop, sender);
+            btn_Kembali.Visible = true;
+        }
+
+        private void btn_Kembali_Click(object sender, EventArgs e)
+        {
+            func.OpenChildForm(new Kasir_Index(), panel_Desktop, sender);
+            btn_Tambah.Visible = true;
+        }
     }
 }
