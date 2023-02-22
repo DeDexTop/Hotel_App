@@ -62,8 +62,8 @@ namespace Hotel_App
                 DialogResult dialogResult = MessageBox.Show("Apakah data yang di masukan sudah benar?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if(dialogResult == DialogResult.Yes) 
                 {
-                    func.Command("INSERT INTO user ('nama', 'username', 'password', 'role') VALUES ('" + txt_Nama.Text + "', '" + txt_Username.Text + "', '" + txt_Password.Text + "', '" + cbx_Role.Text + "')");
-                    func.Command("INSERT INTO log ('id_user', 'activity') VALUES ('" + ClassData.id_user + "', 'input data karyawan')");
+                    func.Command("INSERT INTO `user`(`username`, `password`, `nama`, `role`) VALUES ('" + txt_Username.Text + "','" + txt_Password.Text + "','" + txt_Nama.Text + "','" + cbx_Role.Text + "')");
+                    func.Command("INSERT INTO `log` (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'input data karyawan')");
 
                     MessageBox.Show("Data Berhasil Ditambahkan", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -84,7 +84,7 @@ namespace Hotel_App
                 if (dialogResult == DialogResult.Yes)
                 {
                     func.Command("UPDATE user SET nama = '" + txt_Nama.Text + "', username = '" + txt_Username.Text + "', password = '" + txt_Password.Text + "', role = '" + cbx_Role.Text + "' WHERE id = '" + Convert.ToInt32(label_Id.Text) + "'");
-                    func.Command("INSERT INTO log ('id_user', 'activity') VALUES ('" + ClassData.id_user + "', 'mengubah data karyawan')");
+                    func.Command("INSERT INTO `log` (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'mengubah data karyawan')");
 
                     MessageBox.Show("Data Berhasil Diubah", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -99,7 +99,7 @@ namespace Hotel_App
             if (dialogResult == DialogResult.Yes)
             {
                 func.Command("DELET FROM user WHERE id = '" + Convert.ToInt32(label_Id.Text) + "'");
-                func.Command("INSERT INTO log ('id_user', 'activity') VALUES ('" + ClassData.id_user + "', 'menghapus data karyawan')");
+                func.Command("INSERT INTO `log` (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'menghapus data karyawan')");
 
                 MessageBox.Show("Data Berhasil Dihapus", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

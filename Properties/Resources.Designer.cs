@@ -83,6 +83,16 @@ namespace Hotel_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bank__1_ {
+            get {
+                object obj = ResourceManager.GetObject("bank (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bed__1_ {
             get {
                 object obj = ResourceManager.GetObject("bed (1)", resourceCulture);
@@ -126,6 +136,16 @@ namespace Hotel_App.Properties {
         internal static System.Drawing.Bitmap image__1_ {
             get {
                 object obj = ResourceManager.GetObject("image (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap printer__1_ {
+            get {
+                object obj = ResourceManager.GetObject("printer (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

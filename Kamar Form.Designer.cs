@@ -35,13 +35,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label_id = new System.Windows.Forms.Label();
             this.label_gambar = new System.Windows.Forms.Label();
+            this.btn_Batal = new System.Windows.Forms.Button();
             this.btn_SearchImage = new System.Windows.Forms.Button();
             this.pb_Kamar = new System.Windows.Forms.PictureBox();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Insert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Batal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Kamar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Kamar)).BeginInit();
             this.SuspendLayout();
@@ -107,12 +107,28 @@
             // label_gambar
             // 
             this.label_gambar.AutoSize = true;
-            this.label_gambar.Location = new System.Drawing.Point(558, 9);
+            this.label_gambar.Location = new System.Drawing.Point(551, 9);
             this.label_gambar.Name = "label_gambar";
             this.label_gambar.Size = new System.Drawing.Size(63, 20);
             this.label_gambar.TabIndex = 15;
             this.label_gambar.Text = "gambar";
             this.label_gambar.Visible = false;
+            // 
+            // btn_Batal
+            // 
+            this.btn_Batal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Batal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_Batal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Batal.FlatAppearance.BorderSize = 0;
+            this.btn_Batal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Batal.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Batal.Image = global::Hotel_App.Properties.Resources.refresh;
+            this.btn_Batal.Location = new System.Drawing.Point(485, 257);
+            this.btn_Batal.Name = "btn_Batal";
+            this.btn_Batal.Size = new System.Drawing.Size(51, 48);
+            this.btn_Batal.TabIndex = 16;
+            this.btn_Batal.UseVisualStyleBackColor = false;
+            this.btn_Batal.Click += new System.EventHandler(this.btn_Batal_Click);
             // 
             // btn_SearchImage
             // 
@@ -123,7 +139,7 @@
             this.btn_SearchImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SearchImage.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_SearchImage.Image = global::Hotel_App.Properties.Resources.image__1_;
-            this.btn_SearchImage.Location = new System.Drawing.Point(526, 257);
+            this.btn_SearchImage.Location = new System.Drawing.Point(555, 257);
             this.btn_SearchImage.Name = "btn_SearchImage";
             this.btn_SearchImage.Size = new System.Drawing.Size(53, 48);
             this.btn_SearchImage.TabIndex = 13;
@@ -209,22 +225,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "            Data Tipe Kamar";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btn_Batal
-            // 
-            this.btn_Batal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Batal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btn_Batal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Batal.FlatAppearance.BorderSize = 0;
-            this.btn_Batal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Batal.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Batal.Image = global::Hotel_App.Properties.Resources.refresh;
-            this.btn_Batal.Location = new System.Drawing.Point(334, 191);
-            this.btn_Batal.Name = "btn_Batal";
-            this.btn_Batal.Size = new System.Drawing.Size(51, 48);
-            this.btn_Batal.TabIndex = 16;
-            this.btn_Batal.UseVisualStyleBackColor = false;
-            this.btn_Batal.Click += new System.EventHandler(this.btn_Batal_Click);
             // 
             // Kamar_Form
             // 

@@ -15,6 +15,17 @@ namespace Hotel_App
         public Form_Transaksi()
         {
             InitializeComponent();
+            dt_Checkin.CustomFormat = "ddd dd MMM yyyy";
+        }
+
+        private void Form_Transaksi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

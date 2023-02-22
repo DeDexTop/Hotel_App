@@ -20,7 +20,8 @@ namespace Hotel_App
 
         private void Log_Form_Load(object sender, EventArgs e)
         { 
-            func.ReadData("SELECT user.nama Nama, log.activity Aktifitas, log.date Tanggal FROM user JOIN log ON log.id_user = user.id", dgv_Log);
+            func.ReadData("SELECT log.id No, user.nama Nama, log.activity Aktifitas, log.date Tanggal FROM user JOIN log ON log.id_user = user.id ORDER by log.id DESC", dgv_Log);
+            dgv_Log.Columns[0].Visible = false;
         }
     }
 }

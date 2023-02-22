@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelTitleBar.SuspendLayout();
             this.panelDesktop.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -181,6 +182,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.btnKamar);
             this.panelMenu.Controls.Add(this.btnKaryawan);
             this.panelMenu.Controls.Add(this.panelLogo);
@@ -189,6 +191,21 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(244, 654);
             this.panelMenu.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(0, 202);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(244, 54);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Log";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Admin_Form
             // 
@@ -228,5 +245,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button button1;
     }
 }

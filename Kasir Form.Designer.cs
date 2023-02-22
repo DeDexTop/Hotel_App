@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel_Judul = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel_Desktop = new System.Windows.Forms.Panel();
             this.btn_Kembali = new System.Windows.Forms.Button();
             this.btn_Tambah = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel_Desktop = new System.Windows.Forms.Panel();
             this.panel_Judul.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,26 +47,6 @@
             this.panel_Judul.Name = "panel_Judul";
             this.panel_Judul.Size = new System.Drawing.Size(1078, 84);
             this.panel_Judul.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(491, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kasir";
-            // 
-            // panel_Desktop
-            // 
-            this.panel_Desktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Desktop.Location = new System.Drawing.Point(0, 84);
-            this.panel_Desktop.Name = "panel_Desktop";
-            this.panel_Desktop.Size = new System.Drawing.Size(1078, 570);
-            this.panel_Desktop.TabIndex = 1;
             // 
             // btn_Kembali
             // 
@@ -101,11 +81,31 @@
             this.btn_Tambah.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btn_Tambah.Size = new System.Drawing.Size(149, 84);
             this.btn_Tambah.TabIndex = 1;
-            this.btn_Tambah.Text = "    Tambah";
+            this.btn_Tambah.Text = "  Transaksi";
             this.btn_Tambah.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Tambah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Tambah.UseVisualStyleBackColor = true;
             this.btn_Tambah.Click += new System.EventHandler(this.btn_Tambah_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(491, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 39);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Kasir";
+            // 
+            // panel_Desktop
+            // 
+            this.panel_Desktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Desktop.Location = new System.Drawing.Point(0, 84);
+            this.panel_Desktop.Name = "panel_Desktop";
+            this.panel_Desktop.Size = new System.Drawing.Size(1078, 570);
+            this.panel_Desktop.TabIndex = 1;
             // 
             // Kasir_Form
             // 

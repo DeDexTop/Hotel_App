@@ -159,6 +159,9 @@
     <EmbeddedResource Include="Form Login.resx">
       <DependentUpon>Form Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form Transaksi.resx">
+      <DependentUpon>Form Transaksi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kamar Form.resx">
       <DependentUpon>Kamar Form.cs</DependentUpon>
     </EmbeddedResource>

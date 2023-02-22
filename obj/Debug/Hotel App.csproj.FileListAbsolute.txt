@@ -39,3 +39,5 @@ C:\Project\Hotel App\obj\Debug\Hotel_App.Kasir_Form.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Karyawan_Form.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Kamar_Form.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Form_Login.resources
+C:\Project\Hotel App\obj\Debug\Hotel_App.Kasir_Index.resources
+C:\Project\Hotel App\obj\Debug\Hotel_App.Form_Transaksi.resources
