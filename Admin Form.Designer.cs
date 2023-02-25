@@ -29,44 +29,145 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Form));
-            this.btnKaryawan = new System.Windows.Forms.Button();
-            this.btnKamar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.btnOpen = new System.Windows.Forms.Button();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btn_Logout = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.btnKamar = new System.Windows.Forms.Button();
+            this.btnKaryawan = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.panelTitleBar.SuspendLayout();
             this.panelDesktop.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnKaryawan
+            // label1
             // 
-            this.btnKaryawan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKaryawan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKaryawan.FlatAppearance.BorderSize = 0;
-            this.btnKaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKaryawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKaryawan.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnKaryawan.Image = ((System.Drawing.Image)(resources.GetObject("btnKaryawan.Image")));
-            this.btnKaryawan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKaryawan.Location = new System.Drawing.Point(0, 82);
-            this.btnKaryawan.Name = "btnKaryawan";
-            this.btnKaryawan.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnKaryawan.Size = new System.Drawing.Size(244, 60);
-            this.btnKaryawan.TabIndex = 2;
-            this.btnKaryawan.Text = "   Karyawan";
-            this.btnKaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKaryawan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKaryawan.UseVisualStyleBackColor = true;
-            this.btnKaryawan.Click += new System.EventHandler(this.btnKaryawan_Click);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(434, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 37);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Admin";
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelTitleBar.Controls.Add(this.btn_Logout);
+            this.panelTitleBar.Controls.Add(this.btnOpen);
+            this.panelTitleBar.Controls.Add(this.label1);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(244, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(978, 82);
+            this.panelTitleBar.TabIndex = 4;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Controls.Add(this.label4);
+            this.panelDesktop.Controls.Add(this.label3);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(244, 82);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(978, 572);
+            this.panelDesktop.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label3.Location = new System.Drawing.Point(285, 430);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(437, 37);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Selamat Datang Admin name";
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.label2);
+            this.panelLogo.Controls.Add(this.buttonClose);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(244, 82);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(92, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "MENU";
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnKamar);
+            this.panelMenu.Controls.Add(this.btnKaryawan);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(244, 654);
+            this.panelMenu.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Image = global::Hotel_App.Properties.Resources.admin__3_;
+            this.label4.Location = new System.Drawing.Point(286, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(436, 350);
+            this.label4.TabIndex = 1;
+            // 
+            // btn_Logout
+            // 
+            this.btn_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Logout.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Logout.FlatAppearance.BorderSize = 0;
+            this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Logout.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Logout.Image = global::Hotel_App.Properties.Resources.logout;
+            this.btn_Logout.Location = new System.Drawing.Point(807, 0);
+            this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.Size = new System.Drawing.Size(171, 82);
+            this.btn_Logout.TabIndex = 2;
+            this.btn_Logout.Text = "   Log Out";
+            this.btn_Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Logout.UseVisualStyleBackColor = true;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnOpen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpen.FlatAppearance.BorderSize = 0;
+            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpen.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.Image")));
+            this.btnOpen.Location = new System.Drawing.Point(23, 15);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(62, 48);
+            this.btnOpen.TabIndex = 1;
+            this.btnOpen.UseVisualStyleBackColor = false;
+            this.btnOpen.Visible = false;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // btnKamar
             // 
@@ -89,85 +190,30 @@
             this.btnKamar.UseVisualStyleBackColor = true;
             this.btnKamar.Click += new System.EventHandler(this.btnKamar_Click);
             // 
-            // label1
+            // btnKaryawan
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(434, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Admin";
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelTitleBar.Controls.Add(this.btnOpen);
-            this.panelTitleBar.Controls.Add(this.label1);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(244, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(978, 82);
-            this.panelTitleBar.TabIndex = 4;
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnOpen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOpen.FlatAppearance.BorderSize = 0;
-            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpen.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.Image")));
-            this.btnOpen.Location = new System.Drawing.Point(23, 15);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(62, 48);
-            this.btnOpen.TabIndex = 1;
-            this.btnOpen.UseVisualStyleBackColor = false;
-            this.btnOpen.Visible = false;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.Controls.Add(this.label3);
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(244, 82);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(978, 572);
-            this.panelDesktop.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label3.Location = new System.Drawing.Point(33, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(437, 37);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Selamat Datang Admin name";
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.label2);
-            this.panelLogo.Controls.Add(this.buttonClose);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(244, 82);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(92, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "MENU";
+            this.btnKaryawan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKaryawan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKaryawan.FlatAppearance.BorderSize = 0;
+            this.btnKaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKaryawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKaryawan.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnKaryawan.Image = ((System.Drawing.Image)(resources.GetObject("btnKaryawan.Image")));
+            this.btnKaryawan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKaryawan.Location = new System.Drawing.Point(0, 82);
+            this.btnKaryawan.Name = "btnKaryawan";
+            this.btnKaryawan.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnKaryawan.Size = new System.Drawing.Size(244, 60);
+            this.btnKaryawan.TabIndex = 2;
+            this.btnKaryawan.Text = "   Karyawan";
+            this.btnKaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKaryawan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKaryawan.UseVisualStyleBackColor = true;
+            this.btnKaryawan.Click += new System.EventHandler(this.btnKaryawan_Click);
             // 
             // buttonClose
             // 
+            this.buttonClose.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -179,39 +225,12 @@
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.button1);
-            this.panelMenu.Controls.Add(this.btnKamar);
-            this.panelMenu.Controls.Add(this.btnKaryawan);
-            this.panelMenu.Controls.Add(this.panelLogo);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(244, 654);
-            this.panelMenu.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(0, 202);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(244, 54);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Log";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Admin_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 654);
+            this.ControlBox = false;
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
@@ -245,6 +264,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_Logout;
     }
 }

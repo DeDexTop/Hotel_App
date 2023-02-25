@@ -15,6 +15,91 @@ namespace Hotel_App
         public Owner_Form()
         {
             InitializeComponent();
+            label3.Text = "Selamat Datang Owner" + ClassData.nama;
+        }
+
+        Function func = new Function();
+        private Button currentButton;
+        private Form activateForm;
+
+        public void OpenChildForm(Form childForm, Panel panel, object btnSender)
+        {
+            if (activateForm != null)
+            {
+                activateForm.Close();
+            }
+            ActivateButton(btnSender);
+            activateForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel.Controls.Add(childForm);
+            panel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        private void DisableButton()
+        {
+            foreach (Control previousBtn in panelMenu.Controls)
+            {
+                if (previousBtn.GetType() == typeof(Button))
+                {
+                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    previousBtn.ForeColor = Color.Gainsboro;
+                    previousBtn.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                }
+
+            }
+        }
+
+        private void ActivateButton(object btnSender)
+        {
+            if (btnSender != null)
+            {
+                if (currentButton != (Button)btnSender)
+                {
+                    DisableButton();
+
+                    Color color = Color.FromArgb(51, 51, 76);
+                    currentButton = (Button)btnSender;
+                    currentButton.BackColor = func.ChangeColorBrightness(color, -0.3);
+                    currentButton.ForeColor = Color.White;
+                    currentButton.Font = new Font("Microsoft Sans Serif", 12.5F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                    panelLogo.BackColor = Color.Transparent;
+                }
+            }
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Log_Form(), panelDesktop, sender);
+        }
+
+        private void Owner_Form_Load(object sender, EventArgs e)
+        {
+            buttonClose.Visible = false;
+            panelMenu.Visible = false;
+            btnOpen.Visible = true;
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            btnOpen.Visible = true;
+            panelMenu.Visible = false;
+            buttonClose.Visible = false;
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            btnOpen.Visible = false;
+            panelMenu.Visible = true;
+            buttonClose.Visible = true;
+        }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            new Form_Login().Show();
+            this.Close();
         }
     }
 }

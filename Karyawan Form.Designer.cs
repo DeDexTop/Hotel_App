@@ -37,7 +37,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbx_Role = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label_Id = new System.Windows.Forms.Label();
             this.btn_Batal = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
@@ -73,6 +72,7 @@
             // dgv_Karyawan
             // 
             this.dgv_Karyawan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgv_Karyawan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Karyawan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Karyawan.Location = new System.Drawing.Point(12, 343);
             this.dgv_Karyawan.Name = "dgv_Karyawan";
@@ -115,6 +115,7 @@
             // cbx_Role
             // 
             this.cbx_Role.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbx_Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_Role.FormattingEnabled = true;
             this.cbx_Role.Items.AddRange(new object[] {
             "Owner",
@@ -133,16 +134,6 @@
             this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 13;
             this.label5.Text = "Jabatan";
-            // 
-            // label_Id
-            // 
-            this.label_Id.AutoSize = true;
-            this.label_Id.Location = new System.Drawing.Point(753, 21);
-            this.label_Id.Name = "label_Id";
-            this.label_Id.Size = new System.Drawing.Size(21, 20);
-            this.label_Id.TabIndex = 14;
-            this.label_Id.Text = "id";
-            this.label_Id.Visible = false;
             // 
             // btn_Batal
             // 
@@ -237,7 +228,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 523);
             this.Controls.Add(this.btn_Batal);
-            this.Controls.Add(this.label_Id);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbx_Role);
             this.Controls.Add(this.label4);
@@ -275,7 +265,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbx_Role;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label_Id;
         private System.Windows.Forms.Button btn_Batal;
     }
 }

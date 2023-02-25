@@ -41,6 +41,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.cb_Show);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -48,7 +49,6 @@
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtUsername);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
@@ -56,6 +56,7 @@
             // 
             // cb_Show
             // 
+            this.cb_Show.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_Show.AutoSize = true;
             this.cb_Show.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_Show.Location = new System.Drawing.Point(273, 326);

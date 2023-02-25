@@ -28,12 +28,20 @@ namespace Hotel_App
         {
             func.OpenChildForm(new Form_Transaksi(), panel_Desktop, sender);
             btn_Kembali.Visible = true;
+            btn_Tambah.Visible = false;
         }
 
         private void btn_Kembali_Click(object sender, EventArgs e)
         {
             func.OpenChildForm(new Kasir_Index(), panel_Desktop, sender);
             btn_Tambah.Visible = true;
+            btn_Kembali.Visible = false;
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            new Form_Login().Show();
+            this.Close();
         }
     }
 }

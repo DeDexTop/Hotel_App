@@ -33,8 +33,6 @@
             this.txt_Harga = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label_id = new System.Windows.Forms.Label();
-            this.label_gambar = new System.Windows.Forms.Label();
             this.btn_Batal = new System.Windows.Forms.Button();
             this.btn_SearchImage = new System.Windows.Forms.Button();
             this.pb_Kamar = new System.Windows.Forms.PictureBox();
@@ -49,6 +47,7 @@
             // dgv_Kamar
             // 
             this.dgv_Kamar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgv_Kamar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Kamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Kamar.Location = new System.Drawing.Point(12, 323);
             this.dgv_Kamar.Name = "dgv_Kamar";
@@ -93,26 +92,6 @@
             this.label3.Size = new System.Drawing.Size(112, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Harga / Malam";
-            // 
-            // label_id
-            // 
-            this.label_id.AutoSize = true;
-            this.label_id.Location = new System.Drawing.Point(522, 9);
-            this.label_id.Name = "label_id";
-            this.label_id.Size = new System.Drawing.Size(21, 20);
-            this.label_id.TabIndex = 14;
-            this.label_id.Text = "id";
-            this.label_id.Visible = false;
-            // 
-            // label_gambar
-            // 
-            this.label_gambar.AutoSize = true;
-            this.label_gambar.Location = new System.Drawing.Point(551, 9);
-            this.label_gambar.Name = "label_gambar";
-            this.label_gambar.Size = new System.Drawing.Size(63, 20);
-            this.label_gambar.TabIndex = 15;
-            this.label_gambar.Text = "gambar";
-            this.label_gambar.Visible = false;
             // 
             // btn_Batal
             // 
@@ -232,8 +211,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 523);
             this.Controls.Add(this.btn_Batal);
-            this.Controls.Add(this.label_gambar);
-            this.Controls.Add(this.label_id);
             this.Controls.Add(this.btn_SearchImage);
             this.Controls.Add(this.pb_Kamar);
             this.Controls.Add(this.btn_Delete);
@@ -268,8 +245,6 @@
         private System.Windows.Forms.Button btn_Insert;
         private System.Windows.Forms.PictureBox pb_Kamar;
         private System.Windows.Forms.Button btn_SearchImage;
-        private System.Windows.Forms.Label label_id;
-        private System.Windows.Forms.Label label_gambar;
         private System.Windows.Forms.Button btn_Batal;
     }
 }

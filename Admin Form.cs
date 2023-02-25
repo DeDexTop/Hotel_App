@@ -101,9 +101,15 @@ namespace Hotel_App
             OpenChildForm(new Kamar_Form(), panelDesktop, sender);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Logout_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Log_Form(), panelDesktop, sender);
+            new Form_Login().Show();
+            this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

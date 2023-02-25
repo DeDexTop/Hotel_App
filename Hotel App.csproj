@@ -72,6 +72,7 @@
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -96,11 +97,11 @@
       <DependentUpon>Admin Form.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassData.cs" />
-    <Compile Include="Dashboard Form.cs">
+    <Compile Include="Report Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard Form.Designer.cs">
-      <DependentUpon>Dashboard Form.cs</DependentUpon>
+    <Compile Include="Report Form.Designer.cs">
+      <DependentUpon>Report Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Form Login.cs">
       <SubType>Form</SubType>
@@ -155,6 +156,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin Form.resx">
       <DependentUpon>Admin Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Form.resx">
+      <DependentUpon>Report Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Login.resx">
       <DependentUpon>Form Login.cs</DependentUpon>
@@ -230,6 +234,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\angle-left-free-icon-font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ceo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-histogram-free-icon-font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\files1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\input.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ceo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,13 +15,13 @@ namespace Hotel_App
         public Kasir_Index()
         {
             InitializeComponent();
-            label2.Text = "SElamat Datang " + ClassData.nama;
+            label1.Text = "Selamat Datang " + ClassData.nama;
         }
         Function func = new Function();
 
         private void Kasir_Index_Load(object sender, EventArgs e)
         {
-            func.ReadData("SELECT id No, nama_pelanggan Nama, kode_transaksi Kode, jumlah_kamar_dipesan, JumlahKamar, total_nayar Tagihan FROM tb_transaksi", dgv_transaksi);
+            func.ReadData("SELECT id No, nama_pelanggan Nama, kode_transaksi Kode, jumlah_kamar_dipesan JumlahKamar, total_bayar Tagihan FROM tb_transaksi", dgv_transaksi);
         }
     }
 }

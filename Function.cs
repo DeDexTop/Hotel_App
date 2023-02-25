@@ -88,7 +88,7 @@ namespace Hotel_App
             childForm.BringToFront();
             childForm.Show();
         }
-        
+
 
         public Color ChangeColorBrightness(Color color, double correctionFactor)
         {

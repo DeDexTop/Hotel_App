@@ -18,6 +18,7 @@ namespace Hotel_App
         }
 
         Function func = new Function();
+        int id;
 
         new void Refresh()
         {
@@ -31,6 +32,7 @@ namespace Hotel_App
         new void Show()
         {
             func.ReadData("SELECT id No, nama Nama, username Username, password Password, role Peran FROM user", dgv_Karyawan);
+            dgv_Karyawan.Columns[0].Visible = false;
         }
 
         private void Karyawan_Form_Load(object sender, EventArgs e)
@@ -43,7 +45,7 @@ namespace Hotel_App
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgv_Karyawan.Rows[e.RowIndex];
-                label_Id.Text = row.Cells[0].Value.ToString();
+                id = Convert.ToInt32(row.Cells[0].Value);
                 txt_Nama.Text = row.Cells[1].Value.ToString();
                 txt_Username.Text = row.Cells[2].Value.ToString();
                 txt_Password.Text = row.Cells[3].Value.ToString();
@@ -83,7 +85,7 @@ namespace Hotel_App
                 DialogResult dialogResult = MessageBox.Show("Apakah data yang di ubah sudah benar?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    func.Command("UPDATE user SET nama = '" + txt_Nama.Text + "', username = '" + txt_Username.Text + "', password = '" + txt_Password.Text + "', role = '" + cbx_Role.Text + "' WHERE id = '" + Convert.ToInt32(label_Id.Text) + "'");
+                    func.Command("UPDATE user SET nama = '" + txt_Nama.Text + "', username = '" + txt_Username.Text + "', password = '" + txt_Password.Text + "', role = '" + cbx_Role.Text + "' WHERE id = '" + id + "'");
                     func.Command("INSERT INTO `log` (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'mengubah data karyawan')");
 
                     MessageBox.Show("Data Berhasil Diubah", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -98,7 +100,7 @@ namespace Hotel_App
             DialogResult dialogResult = MessageBox.Show("Apakah anda yakin ingin menghapus data ini?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                func.Command("DELET FROM user WHERE id = '" + Convert.ToInt32(label_Id.Text) + "'");
+                func.Command("DELETE FROM user WHERE id = '" + id + "'");
                 func.Command("INSERT INTO `log` (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'menghapus data karyawan')");
 
                 MessageBox.Show("Data Berhasil Dihapus", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -113,3 +115,4 @@ namespace Hotel_App
         }
     }
 }
+ 
