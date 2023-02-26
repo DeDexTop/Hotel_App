@@ -16,5 +16,22 @@ namespace Hotel_App
         {
             InitializeComponent();
         }
+
+        Function func = new Function();
+
+        private void btn_Generate_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT SUM(`total_bayar`) AS `Total`, `dibuat` FROM tb_transaksi GROUP BY DATE_FORMAT(`dibuat`,'%M') ORDER BY FIELD( DATE_FORMAT(`dibuat`, '%M'), 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');";
+            int count = func.GetData(query).Count;
+
+            if (count > 0)
+            {
+                foreach (DataRow dr in func.GetData(query))
+                {
+                    chart_Report.Series[0].Points.AddXY(DateTime.Parse(dr["dibuat"].ToString()).ToString("MMM"), dr["Total"].ToString());
+                }
+            }
+
+        }
     }
 }

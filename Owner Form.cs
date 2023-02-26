@@ -101,5 +101,10 @@ namespace Hotel_App
             new Form_Login().Show();
             this.Close();
         }
+
+        private void btnKamar_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Report_Form(), panelDesktop, sender);
+        }
     }
 }

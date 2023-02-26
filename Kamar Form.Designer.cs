@@ -49,18 +49,18 @@
             this.dgv_Kamar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_Kamar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Kamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Kamar.Location = new System.Drawing.Point(12, 323);
+            this.dgv_Kamar.Location = new System.Drawing.Point(58, 323);
             this.dgv_Kamar.Name = "dgv_Kamar";
             this.dgv_Kamar.RowHeadersWidth = 62;
             this.dgv_Kamar.RowTemplate.Height = 28;
-            this.dgv_Kamar.Size = new System.Drawing.Size(842, 188);
+            this.dgv_Kamar.Size = new System.Drawing.Size(742, 168);
             this.dgv_Kamar.TabIndex = 0;
             this.dgv_Kamar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Kamar_CellDoubleClick);
             // 
             // txt_Tipe
             // 
             this.txt_Tipe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Tipe.Location = new System.Drawing.Point(42, 162);
+            this.txt_Tipe.Location = new System.Drawing.Point(58, 172);
             this.txt_Tipe.Name = "txt_Tipe";
             this.txt_Tipe.Size = new System.Drawing.Size(255, 26);
             this.txt_Tipe.TabIndex = 1;
@@ -68,7 +68,7 @@
             // txt_Harga
             // 
             this.txt_Harga.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Harga.Location = new System.Drawing.Point(42, 242);
+            this.txt_Harga.Location = new System.Drawing.Point(58, 252);
             this.txt_Harga.Name = "txt_Harga";
             this.txt_Harga.Size = new System.Drawing.Size(255, 26);
             this.txt_Harga.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 136);
+            this.label2.Location = new System.Drawing.Point(58, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 20);
             this.label2.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 219);
+            this.label3.Location = new System.Drawing.Point(58, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 20);
             this.label3.TabIndex = 5;
@@ -102,7 +102,7 @@
             this.btn_Batal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Batal.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Batal.Image = global::Hotel_App.Properties.Resources.refresh;
-            this.btn_Batal.Location = new System.Drawing.Point(485, 257);
+            this.btn_Batal.Location = new System.Drawing.Point(451, 257);
             this.btn_Batal.Name = "btn_Batal";
             this.btn_Batal.Size = new System.Drawing.Size(51, 48);
             this.btn_Batal.TabIndex = 16;
@@ -118,7 +118,7 @@
             this.btn_SearchImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SearchImage.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_SearchImage.Image = global::Hotel_App.Properties.Resources.image__1_;
-            this.btn_SearchImage.Location = new System.Drawing.Point(555, 257);
+            this.btn_SearchImage.Location = new System.Drawing.Point(530, 257);
             this.btn_SearchImage.Name = "btn_SearchImage";
             this.btn_SearchImage.Size = new System.Drawing.Size(53, 48);
             this.btn_SearchImage.TabIndex = 13;
@@ -128,7 +128,7 @@
             // pb_Kamar
             // 
             this.pb_Kamar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pb_Kamar.Location = new System.Drawing.Point(438, 55);
+            this.pb_Kamar.Location = new System.Drawing.Point(401, 53);
             this.pb_Kamar.Name = "pb_Kamar";
             this.pb_Kamar.Size = new System.Drawing.Size(217, 184);
             this.pb_Kamar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -144,7 +144,7 @@
             this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Delete.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Delete.Image = global::Hotel_App.Properties.Resources.delete;
-            this.btn_Delete.Location = new System.Drawing.Point(705, 223);
+            this.btn_Delete.Location = new System.Drawing.Point(664, 223);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(136, 55);
             this.btn_Delete.TabIndex = 11;
@@ -163,7 +163,7 @@
             this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Update.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Update.Image = global::Hotel_App.Properties.Resources.edit;
-            this.btn_Update.Location = new System.Drawing.Point(705, 143);
+            this.btn_Update.Location = new System.Drawing.Point(664, 139);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(136, 55);
             this.btn_Update.TabIndex = 10;
@@ -182,7 +182,7 @@
             this.btn_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Insert.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Insert.Image = global::Hotel_App.Properties.Resources.add;
-            this.btn_Insert.Location = new System.Drawing.Point(705, 53);
+            this.btn_Insert.Location = new System.Drawing.Point(664, 53);
             this.btn_Insert.Name = "btn_Insert";
             this.btn_Insert.Size = new System.Drawing.Size(136, 55);
             this.btn_Insert.TabIndex = 9;
@@ -198,7 +198,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Image = global::Hotel_App.Properties.Resources.bed__1_;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(36, 30);
+            this.label1.Location = new System.Drawing.Point(52, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(333, 65);
             this.label1.TabIndex = 2;
