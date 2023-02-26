@@ -100,6 +100,8 @@ namespace Hotel_App
         {
             new Form_Login().Show();
             this.Close();
+
+            func.Command("INSERT INTO `log` (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'Logout')");
         }
 
         private void btnKamar_Click(object sender, EventArgs e)

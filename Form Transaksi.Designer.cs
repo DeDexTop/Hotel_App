@@ -51,10 +51,12 @@
             this.label_Total = new System.Windows.Forms.Label();
             this.txt_Jumlah = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btn_Bayar = new System.Windows.Forms.Button();
             this.pb_Gambar = new System.Windows.Forms.PictureBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Print = new System.Windows.Forms.Button();
             this.btn_Simpan = new System.Windows.Forms.Button();
+            this.btn_Buang = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Kamar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Gambar)).BeginInit();
             this.SuspendLayout();
@@ -154,16 +156,16 @@
             // txt_Hari
             // 
             this.txt_Hari.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Hari.Location = new System.Drawing.Point(478, 221);
+            this.txt_Hari.Location = new System.Drawing.Point(469, 221);
             this.txt_Hari.Name = "txt_Hari";
-            this.txt_Hari.Size = new System.Drawing.Size(103, 26);
+            this.txt_Hari.Size = new System.Drawing.Size(85, 26);
             this.txt_Hari.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(609, 224);
+            this.label2.Location = new System.Drawing.Point(465, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 20);
             this.label2.TabIndex = 5;
@@ -178,7 +180,6 @@
             this.cbx_Tipe.Name = "cbx_Tipe";
             this.cbx_Tipe.Size = new System.Drawing.Size(222, 28);
             this.cbx_Tipe.TabIndex = 6;
-            this.cbx_Tipe.SelectedIndexChanged += new System.EventHandler(this.cbx_Tipe_SelectedIndexChanged);
             this.cbx_Tipe.TextChanged += new System.EventHandler(this.cbx_Tipe_TextChanged);
             // 
             // label3
@@ -218,6 +219,7 @@
             this.txt_Uang.Name = "txt_Uang";
             this.txt_Uang.Size = new System.Drawing.Size(298, 26);
             this.txt_Uang.TabIndex = 14;
+            this.txt_Uang.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Uang_KeyDown);
             // 
             // label_Kembalian
             // 
@@ -267,6 +269,22 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Jumlah Kamar";
             // 
+            // btn_Bayar
+            // 
+            this.btn_Bayar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Bayar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_Bayar.FlatAppearance.BorderSize = 0;
+            this.btn_Bayar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Bayar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Bayar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Bayar.Image = global::Hotel_App.Properties.Resources.rupiah;
+            this.btn_Bayar.Location = new System.Drawing.Point(982, 321);
+            this.btn_Bayar.Name = "btn_Bayar";
+            this.btn_Bayar.Size = new System.Drawing.Size(58, 48);
+            this.btn_Bayar.TabIndex = 20;
+            this.btn_Bayar.UseVisualStyleBackColor = false;
+            this.btn_Bayar.Click += new System.EventHandler(this.btn_Bayar_Click);
+            // 
             // pb_Gambar
             // 
             this.pb_Gambar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -286,9 +304,9 @@
             this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Add.Image = global::Hotel_App.Properties.Resources.add;
-            this.btn_Add.Location = new System.Drawing.Point(581, 119);
+            this.btn_Add.Location = new System.Drawing.Point(582, 117);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(58, 43);
+            this.btn_Add.Size = new System.Drawing.Size(58, 48);
             this.btn_Add.TabIndex = 12;
             this.btn_Add.UseVisualStyleBackColor = false;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
@@ -330,11 +348,29 @@
             this.btn_Simpan.UseVisualStyleBackColor = false;
             this.btn_Simpan.Click += new System.EventHandler(this.btn_Simpan_Click);
             // 
+            // btn_Buang
+            // 
+            this.btn_Buang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Buang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_Buang.FlatAppearance.BorderSize = 0;
+            this.btn_Buang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Buang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Buang.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Buang.Image = global::Hotel_App.Properties.Resources.delete;
+            this.btn_Buang.Location = new System.Drawing.Point(582, 210);
+            this.btn_Buang.Name = "btn_Buang";
+            this.btn_Buang.Size = new System.Drawing.Size(58, 48);
+            this.btn_Buang.TabIndex = 21;
+            this.btn_Buang.UseVisualStyleBackColor = false;
+            this.btn_Buang.Click += new System.EventHandler(this.btn_Buang_Click);
+            // 
             // Form_Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 514);
+            this.Controls.Add(this.btn_Buang);
+            this.Controls.Add(this.btn_Bayar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_Jumlah);
             this.Controls.Add(this.label_Total);
@@ -394,5 +430,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Button btn_Bayar;
+        private System.Windows.Forms.Button btn_Buang;
     }
 }

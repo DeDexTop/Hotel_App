@@ -105,11 +105,8 @@ namespace Hotel_App
         {
             new Form_Login().Show();
             this.Close();
-        }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            func.Command("INSERT INTO `log` (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'Logout')");
         }
     }
 }

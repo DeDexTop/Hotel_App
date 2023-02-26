@@ -122,6 +122,7 @@
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(265, 26);
             this.txtPassword.TabIndex = 7;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtUsername
             // 

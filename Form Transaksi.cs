@@ -32,6 +32,7 @@ namespace Hotel_App
         public string id_transaksi;
         public int id_kamar;
         public DateTime date;
+        public int kembali;
 
         MySqlConnection koneksi = new MySqlConnection("Server=localhost;Database=hotel;user=root;Pwd= ;SslMode=none");
         MySqlCommand cmd;
@@ -124,22 +125,23 @@ namespace Hotel_App
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-
-            DataRowCollection col = func.GetData("SELECT harga_per_malam, id FROM tb_kamar WHERE tipe_kamar = '" + cbx_Tipe.Text + "'");
-            foreach (DataRow dr in col)
-            {
-                harga = Convert.ToInt32(dr["harga_per_malam"]);
-                id_kamar = Convert.ToInt32(dr["id"]);
-            }
-
-            total = harga * Convert.ToInt32(txt_Jumlah.Text) * Convert.ToInt32(txt_Hari.Text);
-
             if (cbx_Tipe.Text == string.Empty || txt_Jumlah.Text == string.Empty || txt_Hari.Text == string.Empty)
             {
                 MessageBox.Show("Pilih tipe kamar, jumlah kamar, dan jumlah hari terlebih dahulu!");
             }
+
+
             else
             {
+                DataRowCollection col = func.GetData("SELECT harga_per_malam, id FROM tb_kamar WHERE tipe_kamar = '" + cbx_Tipe.Text + "'");
+                foreach (DataRow dr in col)
+                {
+                    harga = Convert.ToInt32(dr["harga_per_malam"]);
+                    id_kamar = Convert.ToInt32(dr["id"]);
+                }
+
+                total = harga * Convert.ToInt32(txt_Jumlah.Text) * Convert.ToInt32(txt_Hari.Text);
+
                 bool found = false;
                 if (dgv_Kamar.Rows.Count >= 0)
                 {
@@ -166,7 +168,13 @@ namespace Hotel_App
 
                     LabelHarga();
                 }
+
+                txt_Hari.Text = string.Empty;
+                txt_Jumlah.Text = string.Empty;
+                cbx_Tipe.SelectedItem = null; 
+                pb_Gambar.Image = null;
             }
+
         }
 
         private void btn_Simpan_Click(object sender, EventArgs e)
@@ -213,9 +221,65 @@ namespace Hotel_App
             }
         }
 
-        private void cbx_Tipe_SelectedIndexChanged(object sender, EventArgs e)
+        private void btn_Bayar_Click(object sender, EventArgs e)
         {
+            int uang = Convert.ToInt32(txt_Uang.Text);
+            int total = Convert.ToInt32(Harga());
 
+            if (txt_Uang.Text == string.Empty)
+            {
+                MessageBox.Show("Kolom data tida boleh kosong", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (uang < total)
+                {
+                    MessageBox.Show("Uang yang di masukan kurang");
+                }
+                else
+                {
+                    kembali = uang - total;
+                }
+
+                label_Kembalian.Text = "Kembalian: " + kembali.ToString();
+            }
+        }
+
+        private void btn_Buang_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgv_Kamar.SelectedRows)
+            {
+                dgv_Kamar.Rows.RemoveAt(row.Index);
+
+                LabelHarga();
+            }
+        }
+
+        private void txt_Uang_KeyDown(object sender, KeyEventArgs e)
+        {
+            int uang = Convert.ToInt32(txt_Uang.Text);
+            int total = Convert.ToInt32(Harga());
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_Uang.Text == string.Empty)
+                {
+                    MessageBox.Show("Kolom data tida boleh kosong", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if (uang < total)
+                    {
+                        MessageBox.Show("Uang yang di masukan kurang");
+                    }
+                    else
+                    {
+                        kembali = uang - total;
+                    }
+
+                    label_Kembalian.Text = "Kembalian: " + kembali.ToString();
+                }
+            }
         }
     }
 }

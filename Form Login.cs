@@ -88,5 +88,20 @@ namespace Hotel_App
                 login();
             }
         }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtUsername.Text == string.Empty || txtPassword.Text == string.Empty)
+                {
+                    MessageBox.Show("Kolom data tida boleh kosong", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    login();
+                }
+            }
+        }
     }
 }
