@@ -108,5 +108,10 @@ namespace Hotel_App
         {
             OpenChildForm(new Report_Form(), panelDesktop, sender);
         }
+
+        private void btn_Transaksi_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Report_Transaksi(), panelDesktop, sender);
+        }
     }
 }

@@ -147,7 +147,7 @@ namespace Hotel_App
                 {
                     foreach (DataGridViewRow row in dgv_Kamar.Rows)
                     {
-                        if (Convert.ToString(row.Cells[0].Value) == cbx_Tipe.Text)
+                        if (Convert.ToString(row.Cells[1].Value) == cbx_Tipe.Text)
                         {
                             row.Cells[3].Value = Convert.ToString(Convert.ToInt32(txt_Jumlah.Text) + Convert.ToInt32(row.Cells[3].Value));
                             row.Cells[5].Value = Convert.ToString(Convert.ToInt32(row.Cells[5].Value) + Convert.ToInt32(txt_Hari.Text));
@@ -201,7 +201,7 @@ namespace Hotel_App
 
                 for (int i = 0; i < dgv_Kamar.Rows.Count-1; i++)
                 {
-                    koneksi.Open();
+                    if (koneksi.State == ConnectionState.Closed) koneksi.Open();
                     cmd = new MySqlCommand("INSERT INTO `detail_transaksi` (`id_transaksi`, `id_kamar`, `jumlah_kamar`, `checkin`, `checkout`, `harga`) VALUES (@id_transaksi, @id_kamar, @jumlah, @date1, @date2, @harga)", koneksi);
                     cmd.Parameters.Add("@date1", MySqlDbType.Date).Value = date;
                     cmd.Parameters.Add("@date2", MySqlDbType.Date).Value = date.AddDays(Convert.ToInt64(dgv_Kamar.Rows[i].Cells[5].Value));
@@ -257,11 +257,13 @@ namespace Hotel_App
 
         private void txt_Uang_KeyDown(object sender, KeyEventArgs e)
         {
-            int uang = Convert.ToInt32(txt_Uang.Text);
-            int total = Convert.ToInt32(Harga());
+            
 
             if (e.KeyCode == Keys.Enter)
             {
+                int uang = Convert.ToInt32(txt_Uang.Text);
+                int total = Convert.ToInt32(Harga());
+
                 if (txt_Uang.Text == string.Empty)
                 {
                     MessageBox.Show("Kolom data tida boleh kosong", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);

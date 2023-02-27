@@ -42,3 +42,4 @@ C:\Project\Hotel App\obj\Debug\Hotel_App.Form_Login.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Kasir_Index.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Form_Transaksi.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Report_Form.resources
+C:\Project\Hotel App\obj\Debug\Hotel_App.Report_Transaksi.resources
