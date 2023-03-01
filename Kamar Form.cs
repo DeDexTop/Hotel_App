@@ -42,6 +42,7 @@ namespace Hotel_App
         {
             Show();
             dgv_Kamar.Columns[3].Visible = false;
+            dgv_Kamar.Columns[0].Visible = false;
         }
 
 
@@ -147,6 +148,20 @@ namespace Hotel_App
         private void btn_Batal_Click(object sender, EventArgs e)
         {
             Refresh();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            if(txt_Search.Text == string.Empty)
+            {
+                MessageBox.Show("Mohon masukan kunci pencarin terlebih dahulu");
+            }
+            else
+            {
+                func.ReadData("SELECT id No, tipe_kamar Tipe, harga_per_malam Harga, gambar Gambar FROM tb_kamar WHERE tipe_kamar LIKE '" + txt_Search.Text + "'%", dgv_Kamar);
+                dgv_Kamar.Columns[3].Visible = false;
+                dgv_Kamar.Columns[0].Visible = false;
+            }
         }
     }
 }

@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.chart_Report = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btn_Print = new System.Windows.Forms.Button();
             this.btn_Generate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Report)).BeginInit();
             this.SuspendLayout();
@@ -52,37 +51,19 @@
             // chart_Report
             // 
             this.chart_Report.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chartArea2.Name = "ChartArea1";
-            this.chart_Report.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart_Report.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart_Report.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_Report.Legends.Add(legend1);
             this.chart_Report.Location = new System.Drawing.Point(64, 157);
             this.chart_Report.Name = "chart_Report";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Pemasukan";
-            this.chart_Report.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Pemasukan";
+            this.chart_Report.Series.Add(series1);
             this.chart_Report.Size = new System.Drawing.Size(653, 334);
             this.chart_Report.TabIndex = 1;
             this.chart_Report.Text = "chart1";
-            // 
-            // btn_Print
-            // 
-            this.btn_Print.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btn_Print.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Print.FlatAppearance.BorderSize = 0;
-            this.btn_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Print.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Print.Image = global::Hotel_App.Properties.Resources.printer__1_;
-            this.btn_Print.Location = new System.Drawing.Point(746, 250);
-            this.btn_Print.Name = "btn_Print";
-            this.btn_Print.Size = new System.Drawing.Size(155, 55);
-            this.btn_Print.TabIndex = 12;
-            this.btn_Print.Text = "   Print";
-            this.btn_Print.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Print.UseVisualStyleBackColor = false;
             // 
             // btn_Generate
             // 
@@ -108,7 +89,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 516);
-            this.Controls.Add(this.btn_Print);
             this.Controls.Add(this.btn_Generate);
             this.Controls.Add(this.chart_Report);
             this.Controls.Add(this.label1);
@@ -125,6 +105,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_Report;
         private System.Windows.Forms.Button btn_Generate;
-        private System.Windows.Forms.Button btn_Print;
     }
 }

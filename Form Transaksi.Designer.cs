@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Transaksi));
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Nama = new System.Windows.Forms.TextBox();
             this.dt_Checkin = new System.Windows.Forms.DateTimePicker();
@@ -57,6 +58,8 @@
             this.btn_Print = new System.Windows.Forms.Button();
             this.btn_Simpan = new System.Windows.Forms.Button();
             this.btn_Buang = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Kamar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Gambar)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +69,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 17);
+            this.label1.Location = new System.Drawing.Point(22, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 39);
             this.label1.TabIndex = 0;
@@ -115,7 +118,6 @@
             this.Column5.HeaderText = "Id";
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
-            this.Column5.Visible = false;
             // 
             // Tipe
             // 
@@ -288,9 +290,9 @@
             // pb_Gambar
             // 
             this.pb_Gambar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pb_Gambar.Location = new System.Drawing.Point(741, 33);
+            this.pb_Gambar.Location = new System.Drawing.Point(741, 55);
             this.pb_Gambar.Name = "pb_Gambar";
-            this.pb_Gambar.Size = new System.Drawing.Size(243, 226);
+            this.pb_Gambar.Size = new System.Drawing.Size(243, 204);
             this.pb_Gambar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Gambar.TabIndex = 13;
             this.pb_Gambar.TabStop = false;
@@ -328,6 +330,7 @@
             this.btn_Print.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Print.UseVisualStyleBackColor = false;
+            this.btn_Print.Click += new System.EventHandler(this.btn_Print_Click);
             // 
             // btn_Simpan
             // 
@@ -363,6 +366,20 @@
             this.btn_Buang.TabIndex = 21;
             this.btn_Buang.UseVisualStyleBackColor = false;
             this.btn_Buang.Click += new System.EventHandler(this.btn_Buang_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Form_Transaksi
             // 
@@ -423,6 +440,10 @@
         private System.Windows.Forms.Label label_Total;
         private System.Windows.Forms.TextBox txt_Jumlah;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btn_Bayar;
+        private System.Windows.Forms.Button btn_Buang;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -430,7 +451,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.Button btn_Bayar;
-        private System.Windows.Forms.Button btn_Buang;
     }
 }

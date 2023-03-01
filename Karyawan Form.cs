@@ -31,7 +31,7 @@ namespace Hotel_App
 
         new void Show()
         {
-            func.ReadData("SELECT id No, nama Nama, username Username, password Password, role Peran FROM user", dgv_Karyawan);
+            func.ReadData("SELECT id No, nama Nama, username Username, password Password, role Peran FROM user WHERE id != '" +  ClassData.id_user + "'", dgv_Karyawan);
             dgv_Karyawan.Columns[0].Visible = false;
         }
 
@@ -112,6 +112,19 @@ namespace Hotel_App
         private void btn_Batal_Click(object sender, EventArgs e)
         {
             Refresh();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            if(txt_Search.Text == string.Empty)
+            {
+                MessageBox.Show("Masukan kunci pencarian rterlebih dahulu");
+            }
+            else
+            {
+                func.ReadData("SELECT id No, nama Nama, username Username, password Password, role Peran FROM user WHERE nama Like '" + txt_Search.Text + "'%", dgv_Karyawan);
+                dgv_Karyawan.Columns[0].Visible = false;
+            }
         }
     }
 }

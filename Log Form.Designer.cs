@@ -42,7 +42,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 18);
+            this.label1.Location = new System.Drawing.Point(34, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(237, 36);
             this.label1.TabIndex = 1;
@@ -52,11 +52,11 @@
             // 
             this.dgv_Log.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_Log.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Log.Location = new System.Drawing.Point(73, 234);
+            this.dgv_Log.Location = new System.Drawing.Point(40, 234);
             this.dgv_Log.Name = "dgv_Log";
             this.dgv_Log.RowHeadersWidth = 62;
             this.dgv_Log.RowTemplate.Height = 28;
-            this.dgv_Log.Size = new System.Drawing.Size(795, 270);
+            this.dgv_Log.Size = new System.Drawing.Size(869, 270);
             this.dgv_Log.TabIndex = 0;
             // 
             // label_Data
@@ -77,7 +77,7 @@
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Login.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Login.Image = global::Hotel_App.Properties.Resources.files1;
-            this.btn_Login.Location = new System.Drawing.Point(637, 123);
+            this.btn_Login.Location = new System.Drawing.Point(392, 86);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(150, 56);
             this.btn_Login.TabIndex = 4;
@@ -94,7 +94,7 @@
             this.btn_Input.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Input.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Input.Image = global::Hotel_App.Properties.Resources.input;
-            this.btn_Input.Location = new System.Drawing.Point(389, 123);
+            this.btn_Input.Location = new System.Drawing.Point(206, 86);
             this.btn_Input.Name = "btn_Input";
             this.btn_Input.Size = new System.Drawing.Size(167, 56);
             this.btn_Input.TabIndex = 3;
@@ -111,7 +111,7 @@
             this.btn_Transaksi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Transaksi.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Transaksi.Image = global::Hotel_App.Properties.Resources.transaction;
-            this.btn_Transaksi.Location = new System.Drawing.Point(145, 123);
+            this.btn_Transaksi.Location = new System.Drawing.Point(40, 86);
             this.btn_Transaksi.Name = "btn_Transaksi";
             this.btn_Transaksi.Size = new System.Drawing.Size(150, 56);
             this.btn_Transaksi.TabIndex = 2;

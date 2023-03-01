@@ -44,5 +44,10 @@ namespace Hotel_App
             dgv_Log.Columns[0].Visible = false;
             label_Data.Text = "Data Aktivitas Admin";
         }
+
+        private void btn_Batal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

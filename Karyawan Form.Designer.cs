@@ -42,6 +42,8 @@
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Insert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.txt_Search = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Karyawan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +121,8 @@
             this.cbx_Role.FormattingEnabled = true;
             this.cbx_Role.Items.AddRange(new object[] {
             "Owner",
-            "Kasir"});
+            "Kasir",
+            "Admin"});
             this.cbx_Role.Location = new System.Drawing.Point(356, 153);
             this.cbx_Role.Name = "cbx_Role";
             this.cbx_Role.Size = new System.Drawing.Size(284, 28);
@@ -144,7 +147,7 @@
             this.btn_Batal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Batal.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Batal.Image = global::Hotel_App.Properties.Resources.refresh;
-            this.btn_Batal.Location = new System.Drawing.Point(32, 276);
+            this.btn_Batal.Location = new System.Drawing.Point(587, 287);
             this.btn_Batal.Name = "btn_Batal";
             this.btn_Batal.Size = new System.Drawing.Size(53, 49);
             this.btn_Batal.TabIndex = 15;
@@ -222,11 +225,35 @@
             this.label1.Text = "             Data Karyawan";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btn_Search
+            // 
+            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_Search.FlatAppearance.BorderSize = 0;
+            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Search.Image = global::Hotel_App.Properties.Resources.magnifying_glass;
+            this.btn_Search.Location = new System.Drawing.Point(251, 291);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(51, 45);
+            this.btn_Search.TabIndex = 20;
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
+            // txt_Search
+            // 
+            this.txt_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Search.Location = new System.Drawing.Point(32, 302);
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Size = new System.Drawing.Size(192, 26);
+            this.txt_Search.TabIndex = 19;
+            // 
             // Karyawan_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 523);
+            this.Controls.Add(this.btn_Search);
+            this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.btn_Batal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbx_Role);
@@ -266,5 +293,7 @@
         private System.Windows.Forms.ComboBox cbx_Role;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_Batal;
+        private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.TextBox txt_Search;
     }
 }
