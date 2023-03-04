@@ -31,7 +31,6 @@ namespace Hotel_App
                     chart_Report.Series[0].Points.AddXY(DateTime.Parse(dr["dibuat"].ToString()).ToString("MMM"), dr["Total"].ToString());
                 }
             }
-
         }
     }
 }

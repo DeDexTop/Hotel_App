@@ -49,20 +49,29 @@ namespace Hotel_App
         private void btn_SearchImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
-            opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+            opf.Filter = "Choose Image(*.jpg; *.png; *.jpeg)|*.jpg; *.png; *.jpeg";
             if (opf.ShowDialog() == DialogResult.OK)
             {
 
                 //inserting image to a folder
                 string newlocation = Path.GetDirectoryName(Application.ExecutablePath) + "\\assets\\" + txt_Tipe.Text + ".png";
                 string filename = opf.FileName;
-                if(pb_Kamar.Image != null)
+                if (File.Exists(newlocation))
                 {
                     pb_Kamar.Image.Dispose();
                 }
-
                 pb_Kamar.Image = Image.FromFile(opf.FileName);
-                File.Copy(filename, newlocation);
+
+                if (File.Exists(newlocation))
+                {
+                    File.Delete(newlocation);
+                    File.Copy(filename, newlocation);
+                }
+                else
+                {
+                    File.Copy(filename, newlocation);
+                }
+
 
                 newName = txt_Tipe.Text + ".png";
                 gambar = newName;
@@ -80,8 +89,8 @@ namespace Hotel_App
                 DialogResult dialogResult = MessageBox.Show("Apakah data yang di masukan sudah benar?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    func.Command("INSERT INTO `tb_kamar` (`tipe_kamar`, `harga_per_malam`, `gambar`) VALUES ('" + txt_Tipe.Text + "', '" + txt_Harga.Text + "', '" + gambar + "')");
-                    func.Command("INSERT INTO `log` (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'input data kamar')");
+                    func.Command("INSERT INTO `tb_kamar` (`tipe_kamar`, `harga_per_malam`, `gambar`, `dibuat`) VALUES ('" + txt_Tipe.Text + "', '" + txt_Harga.Text + "', '" + gambar + "', CURRENT_DATE())");
+                    func.Command("INSERT INTO `log` (`id_user`, `activity`, `date`) VALUES ('" + ClassData.id_user + "', 'input data kamar', CURRENT_DATE())");
                     MessageBox.Show("Data Berhasil Ditambahkan", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Refresh();
@@ -117,8 +126,8 @@ namespace Hotel_App
                 DialogResult dialogResult = MessageBox.Show("Apakah data yang di ubah sudah benar?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    func.Command("UPDATE `tb_kamar` SET tipe_kamar = '" + txt_Tipe.Text + "', harga_per_malam = '" + txt_Harga.Text + "', gambar = '" + gambar + "' WHERE id = '" + id + "'");
-                    func.Command("INSERT INTO `log` (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'mengubah data kamar')");
+                    func.Command("UPDATE `tb_kamar` SET tipe_kamar = '" + txt_Tipe.Text + "', harga_per_malam = '" + txt_Harga.Text + "', gambar = '" + gambar + "', diupdate = CURRENT_DATE() WHERE id = '" + id + "'");
+                    func.Command("INSERT INTO `log` (`id_user`, `activity`, `date`) VALUES ('" + ClassData.id_user + "', 'mengubah data kamar', CURRENT_DATE())");
                     MessageBox.Show("Data Berhasil Diubah", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Refresh();
@@ -132,7 +141,7 @@ namespace Hotel_App
             if (dialogResult == DialogResult.Yes)
             {
                 func.Command("DELETE FROM tb_kamar WHERE id = '" + id + "'");
-                func.Command("INSERT INTO `log` (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'menghapus data kamar')");
+                func.Command("INSERT INTO `log` (`id_user`, `activity`, `date`) VALUES ('" + ClassData.id_user + "', 'menghapus data kamar', CURRENT_DATE())");
 
                 //deleting image from folder
                 gambar = dgv_Kamar.Rows[3].Cells.ToString();

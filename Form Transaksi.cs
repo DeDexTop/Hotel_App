@@ -147,16 +147,6 @@ namespace Hotel_App
                 bool found = false;
                 if (dgv_Kamar.Rows.Count >= 0)
                 {
-                    foreach (DataGridViewRow row in dgv_Kamar.Rows)
-                    {
-                        if (Convert.ToString(row.Cells[1].Value) == cbx_Tipe.Text)
-                        {
-                            row.Cells[3].Value = Convert.ToString(Convert.ToInt32(txt_Jumlah.Text) + Convert.ToInt32(row.Cells[3].Value));
-                            row.Cells[5].Value = Convert.ToString(Convert.ToInt32(row.Cells[5].Value) + Convert.ToInt32(txt_Hari.Text));
-                            row.Cells[6].Value = Convert.ToString(Convert.ToInt32(row.Cells[6].Value) + total);
-                            found = true;
-                        }
-                    }
                     if (!found)
                     {
                         dgv_Kamar.Rows.Add(id_kamar, cbx_Tipe.Text, harga.ToString(), txt_Jumlah.Text, dt_Checkin.Value.ToString(), txt_Hari.Text, total);
@@ -196,7 +186,7 @@ namespace Hotel_App
                 }
                 else
                 {
-                    func.Command("INSERT INTO `tb_transaksi` (`id_user`, `nama_pelanggan`, `kode_transaksi`, `jumlah_kamar_dipesan`, `total_bayar`) VALUES ('" + ClassData.id_user + "', '" + txt_Nama.Text + "', '" + kode + "', '" + Jumlah() + "', '" + Harga() + "')");
+                    func.Command("INSERT INTO `tb_transaksi` (`id_user`, `nama_pelanggan`, `kode_transaksi`, `jumlah_kamar_dipesan`, `total_bayar`, `dibuat`) VALUES ('" + ClassData.id_user + "', '" + txt_Nama.Text + "', '" + kode + "', '" + Jumlah() + "', '" + Harga() + "', CURRENT_DATE())");
 
 
                     DataRowCollection col = func.GetData("SELECT id FROM tb_transaksi WHERE nama_pelanggan = '" + txt_Nama.Text + "'");
@@ -210,7 +200,7 @@ namespace Hotel_App
                     for (int i = 0; i < dgv_Kamar.Rows.Count - 1; i++)
                     {
                         if (koneksi.State == ConnectionState.Closed) koneksi.Open();
-                        cmd = new MySqlCommand("INSERT INTO `detail_transaksi` (`id_transaksi`, `id_kamar`, `jumlah_kamar`, `checkin`, `checkout`, `harga`) VALUES (@id_transaksi, @id_kamar, @jumlah, @date1, @date2, @harga)", koneksi);
+                        cmd = new MySqlCommand("INSERT INTO `detail_transaksi` (`id_transaksi`, `id_kamar`, `jumlah_kamar`, `checkin`, `checkout`, `harga`, `dibuat`) VALUES (@id_transaksi, @id_kamar, @jumlah, @date1, @date2, @harga, CURRENT_DATE())", koneksi);
                         cmd.Parameters.Add("@date1", MySqlDbType.Date).Value = date;
                         cmd.Parameters.Add("@date2", MySqlDbType.Date).Value = date.AddDays(Convert.ToInt64(dgv_Kamar.Rows[i].Cells[5].Value));
                         cmd.Parameters.AddWithValue("@id_transaksi", id_transaksi);
@@ -221,7 +211,7 @@ namespace Hotel_App
                         cmd.ExecuteNonQuery();
                     }
 
-                    func.Command("INSERT INTO `log`(`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'input data transaksi')");
+                    func.Command("INSERT INTO `log`(`id_user`, `activity`, `date`) VALUES ('" + ClassData.id_user + "', 'input data transaksi', CURRENT_DATE())");
 
                     MessageBox.Show("Transaksi berhasil di simpan!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

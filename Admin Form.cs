@@ -106,7 +106,7 @@ namespace Hotel_App
             new Form_Login().Show();
             this.Close();
 
-            func.Command("INSERT INTO `log` (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "', 'Logout')");
+            func.Command("INSERT INTO `log` (`id_user`, `activity`, `date`) VALUES ('" + ClassData.id_user + "', 'Logout', CURRENT_DATE())");
         }
     }
 }

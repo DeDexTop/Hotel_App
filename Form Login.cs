@@ -38,19 +38,19 @@ namespace Hotel_App
                         {
                             new Admin_Form().Show();
                             this.Hide();
-                            func.Command("INSERT INTO log (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "','Login')");
+                            func.Command("INSERT INTO log (`id_user`, `activity`, `date`) VALUES ('" + ClassData.id_user + "','Login', CURRENT_DATE())");
                         }
                         else if (dr["role"].ToString().Equals("owner"))
                         {
                             new Owner_Form().Show();
                             this.Hide();
-                            func.Command("INSERT INTO log (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "','Login')");
+                            func.Command("INSERT INTO log (`id_user`, `activity`, `date`) VALUES ('" + ClassData.id_user + "','Login', CURRENT_DATE())");
                         }
                         else if (dr["role"].ToString().Equals("kasir"))
                         {
                             new Kasir_Form().Show();
                             this.Hide();
-                            func.Command("INSERT INTO log (`id_user`, `activity`) VALUES ('" + ClassData.id_user + "','Login')");
+                            func.Command("INSERT INTO log (`id_user`, `activity`, `date`) VALUES ('" + ClassData.id_user + "','Login', CURRENT_DATE())");
                         }
                     }
                 }

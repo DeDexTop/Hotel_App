@@ -28,12 +28,12 @@ namespace Hotel_App
         {
             func.ReadData("SELECT log.id No, user.nama Nama, user.role Peran, log.activity Aktifitas, log.date Tanggal FROM user JOIN log ON log.id_user = user.id WHERE user.role = 'kasir' AND log.activity != 'logout' AND log.activity != 'login' ORDER by log.id DESC", dgv_Log);
             dgv_Log.Columns[0].Visible = false;
-            label_Data.Text = "Data Keseluruhan Transaksi";
+            label_Data.Text = "Data Aktifitas Transaksi";
         }
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            func.ReadData("SELECT log.id No, user.nama Nama, user.role Peran, log.activity Aktifitas, log.date Tanggal FROM user JOIN log ON log.id_user = user.id WHERE user.role != 'owner' ORDER by log.id DESC", dgv_Log);
+            func.ReadData("SELECT log.id No, user.nama Nama, user.role Peran, log.activity Aktifitas, log.date Tanggal FROM user JOIN log ON log.id_user = user.id WHERE user.role != 'owner' AND log.activity = 'login' AND log.activity = 'logout' ORDER by log.id DESC", dgv_Log);
             dgv_Log.Columns[0].Visible = false;
             label_Data.Text = "Data Login Karyawan";
         }
@@ -43,11 +43,6 @@ namespace Hotel_App
             func.ReadData("SELECT log.id No, user.nama Nama, user.role Peran, log.activity Aktifitas, log.date Tanggal FROM user JOIN log ON log.id_user = user.id WHERE user.role = 'admin' AND log.activity != 'logout' AND log.activity != 'login' ORDER by log.id DESC", dgv_Log);
             dgv_Log.Columns[0].Visible = false;
             label_Data.Text = "Data Aktivitas Admin";
-        }
-
-        private void btn_Batal_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

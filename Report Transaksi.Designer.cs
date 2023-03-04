@@ -30,22 +30,24 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_Transaksi = new System.Windows.Forms.DataGridView();
-            this.dgv_Detail = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.btn_Search = new System.Windows.Forms.Button();
             this.btn_Batal = new System.Windows.Forms.Button();
-            this.txt_Id = new System.Windows.Forms.TextBox();
+            this.dt_Tanggal2 = new System.Windows.Forms.DateTimePicker();
+            this.dt_Tanggal = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Transaksi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Detail)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 34);
+            this.label1.Location = new System.Drawing.Point(38, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(262, 36);
             this.label1.TabIndex = 0;
@@ -53,27 +55,18 @@
             // 
             // dgv_Transaksi
             // 
+            this.dgv_Transaksi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_Transaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Transaksi.Location = new System.Drawing.Point(44, 212);
             this.dgv_Transaksi.Name = "dgv_Transaksi";
             this.dgv_Transaksi.RowHeadersWidth = 62;
             this.dgv_Transaksi.RowTemplate.Height = 28;
-            this.dgv_Transaksi.Size = new System.Drawing.Size(487, 277);
+            this.dgv_Transaksi.Size = new System.Drawing.Size(873, 277);
             this.dgv_Transaksi.TabIndex = 1;
-            // 
-            // dgv_Detail
-            // 
-            this.dgv_Detail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Detail.Location = new System.Drawing.Point(576, 212);
-            this.dgv_Detail.Name = "dgv_Detail";
-            this.dgv_Detail.RowHeadersWidth = 62;
-            this.dgv_Detail.RowTemplate.Height = 28;
-            this.dgv_Detail.Size = new System.Drawing.Size(341, 277);
-            this.dgv_Detail.TabIndex = 2;
-            this.dgv_Detail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Detail_CellClick);
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(40, 177);
             this.label2.Name = "label2";
@@ -81,29 +74,22 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Daftar Pelanggan";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(572, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Detail";
-            // 
             // txt_Search
             // 
-            this.txt_Search.Location = new System.Drawing.Point(653, 44);
+            this.txt_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Search.Location = new System.Drawing.Point(678, 108);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.Size = new System.Drawing.Size(207, 26);
             this.txt_Search.TabIndex = 5;
             // 
             // btn_Search
             // 
+            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btn_Search.FlatAppearance.BorderSize = 0;
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.Image = global::Hotel_App.Properties.Resources.magnifying_glass;
-            this.btn_Search.Location = new System.Drawing.Point(866, 35);
+            this.btn_Search.Location = new System.Drawing.Point(834, 154);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(51, 45);
             this.btn_Search.TabIndex = 6;
@@ -119,39 +105,81 @@
             this.btn_Batal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Batal.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Batal.Image = global::Hotel_App.Properties.Resources.refresh;
-            this.btn_Batal.Location = new System.Drawing.Point(866, 103);
+            this.btn_Batal.Location = new System.Drawing.Point(761, 152);
             this.btn_Batal.Name = "btn_Batal";
             this.btn_Batal.Size = new System.Drawing.Size(51, 48);
             this.btn_Batal.TabIndex = 17;
             this.btn_Batal.UseVisualStyleBackColor = false;
+            this.btn_Batal.Click += new System.EventHandler(this.btn_Batal_Click);
             // 
-            // txt_Id
+            // dt_Tanggal2
             // 
-            this.txt_Id.Location = new System.Drawing.Point(12, 39);
-            this.txt_Id.Name = "txt_Id";
-            this.txt_Id.Size = new System.Drawing.Size(50, 26);
-            this.txt_Id.TabIndex = 18;
-            this.txt_Id.Visible = false;
+            this.dt_Tanggal2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dt_Tanggal2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dt_Tanggal2.Location = new System.Drawing.Point(678, 47);
+            this.dt_Tanggal2.Name = "dt_Tanggal2";
+            this.dt_Tanggal2.Size = new System.Drawing.Size(207, 26);
+            this.dt_Tanggal2.TabIndex = 19;
+            // 
+            // dt_Tanggal
+            // 
+            this.dt_Tanggal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dt_Tanggal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dt_Tanggal.Location = new System.Drawing.Point(438, 47);
+            this.dt_Tanggal.Name = "dt_Tanggal";
+            this.dt_Tanggal.Size = new System.Drawing.Size(207, 26);
+            this.dt_Tanggal.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(434, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 20);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Dari:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(674, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 20);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Ke:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(674, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 20);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Nama:";
             // 
             // Report_Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 516);
-            this.Controls.Add(this.txt_Id);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dt_Tanggal);
+            this.Controls.Add(this.dt_Tanggal2);
             this.Controls.Add(this.btn_Batal);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.txt_Search);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgv_Detail);
             this.Controls.Add(this.dgv_Transaksi);
             this.Controls.Add(this.label1);
             this.Name = "Report_Transaksi";
             this.Text = "Report_Transaksi";
             this.Load += new System.EventHandler(this.Report_Transaksi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Transaksi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Detail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,12 +189,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_Transaksi;
-        private System.Windows.Forms.DataGridView dgv_Detail;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_Search;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Button btn_Batal;
-        private System.Windows.Forms.TextBox txt_Id;
+        private System.Windows.Forms.DateTimePicker dt_Tanggal2;
+        private System.Windows.Forms.DateTimePicker dt_Tanggal;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
     }
 }
