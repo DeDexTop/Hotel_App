@@ -354,12 +354,12 @@ namespace Hotel_App
             checkout = list5.ToArray();
             harga_bayar = list6.ToArray();
 
-            e.Graphics.DrawString(" Hotel Nesas ", heading, Brushes.Black, 200, 10);
-            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------", font, Brushes.Black, 50, 30);
-            e.Graphics.DrawString("Pelanggan : " + nama + " ", font, Brushes.Black, 50, 80);
-            e.Graphics.DrawString("Tanggal : " + DateTime.Now.ToShortDateString() + "", font, Brushes.Black, 50, 110);
-            e.Graphics.DrawString("Kode Transaksi : " + kode + " ", font, Brushes.Black, 50,  140);
-            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------", font, Brushes.Black, 50, 180);
+            e.Graphics.DrawString(" Hotel Nesas ", heading, Brushes.Black, 350, 10);
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------", font, Brushes.Black, 130, 30);
+            e.Graphics.DrawString("Pelanggan : " + nama + " ", font, Brushes.Black, 130, 80);
+            e.Graphics.DrawString("Tanggal : " + DateTime.Now.ToShortDateString() + "", font, Brushes.Black, 130, 110);
+            e.Graphics.DrawString("Kode Transaksi : " + kode + " ", font, Brushes.Black, 130,  140);
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------", font, Brushes.Black, 130, 180);
             int x = 0;
             int x1 = 210;
             int x2 = 240;
@@ -368,19 +368,21 @@ namespace Hotel_App
             {
 
                 x = x3;
-                e.Graphics.DrawString("Tipe Kamar : " + tipe_kamar[i] + "  |  Harga / Malam: " + harga_per_malam[i] + "", font, Brushes.Black, 50, x1);
-                e.Graphics.DrawString("" + harga_per_malam[i] + " x " + jumlah_kamar[i] + " \t =  " + harga_bayar[i] + "", font, Brushes.Black, 50, x2);
-                e.Graphics.DrawString("Check In : " + checkin[i] + "   |   Check Out : " + checkout[i] + "", font, Brushes.Black, 50, x3);
+                e.Graphics.DrawString("Tipe Kamar : " + tipe_kamar[i] + "  |  Harga / Malam: " + harga_per_malam[i] + "", font, Brushes.Black, 130, x1);
+                e.Graphics.DrawString("" + harga_per_malam[i] + " x " + jumlah_kamar[i] + " \t =  Rp. " + harga_bayar[i] + "", font, Brushes.Black, 130, x2);
+                e.Graphics.DrawString("Check In : " + checkin[i] + "   |   Check Out : " + checkout[i] + "", font, Brushes.Black, 130, x3);
                 x1 = x3 + 30;
                 x2 = x1 + 30;
                 x3 = x2 + 30;
             }
            
-            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------", font, Brushes.Black, 50, x + 30);
-            e.Graphics.DrawString("Uang Masuk   : \t" + txt_Uang.Text + "", font, Brushes.Black, 50, x + 60);
-            e.Graphics.DrawString("Total Harga  : \t" + total_harga + "", font, Brushes.Black, 50, x + 90);
-            e.Graphics.DrawString("__________________________________ -", font, Brushes.Black, 50, x + 120);
-            e.Graphics.DrawString("Kembalian    : \t" + kembali + " ", font, Brushes.Black, 50, x + 150);
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------", font, Brushes.Black, 130, x + 30);
+            e.Graphics.DrawString("Uang Masuk   : \t Rp. " + txt_Uang.Text + "", font, Brushes.Black, 130, x + 60);
+            e.Graphics.DrawString("Total Harga  : \t Rp. " + total_harga + "", font, Brushes.Black, 130, x + 90);
+            e.Graphics.DrawString("__________________________________ -", font, Brushes.Black, 130, x + 120);
+            e.Graphics.DrawString("Kembalian    : \t Rp. " + kembali + " ", font, Brushes.Black, 130, x + 150);
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------", font, Brushes.Black, 130, x + 180);
+            e.Graphics.DrawString("Terima Kasih Atas Kunjungan Anda", font, Brushes.Black, 320, x + 220);
 
             id_transaksi = string.Empty;
             txt_Uang.Text = string.Empty;

@@ -15,7 +15,7 @@ namespace Hotel_App
         public Owner_Form()
         {
             InitializeComponent();
-            label3.Text = "Selamat Datang Owner" + ClassData.nama;
+            label3.Text = "Selamat Datang Owner " + ClassData.nama;
         }
 
         Function func = new Function();
