@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_Print = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Transaksi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,9 +90,9 @@
             this.btn_Search.FlatAppearance.BorderSize = 0;
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.Image = global::Hotel_App.Properties.Resources.magnifying_glass;
-            this.btn_Search.Location = new System.Drawing.Point(834, 154);
+            this.btn_Search.Location = new System.Drawing.Point(824, 146);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(51, 45);
+            this.btn_Search.Size = new System.Drawing.Size(61, 60);
             this.btn_Search.TabIndex = 6;
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
@@ -105,9 +106,9 @@
             this.btn_Batal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Batal.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Batal.Image = global::Hotel_App.Properties.Resources.refresh;
-            this.btn_Batal.Location = new System.Drawing.Point(761, 152);
+            this.btn_Batal.Location = new System.Drawing.Point(749, 146);
             this.btn_Batal.Name = "btn_Batal";
-            this.btn_Batal.Size = new System.Drawing.Size(51, 48);
+            this.btn_Batal.Size = new System.Drawing.Size(64, 60);
             this.btn_Batal.TabIndex = 17;
             this.btn_Batal.UseVisualStyleBackColor = false;
             this.btn_Batal.Click += new System.EventHandler(this.btn_Batal_Click);
@@ -160,11 +161,31 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Nama:";
             // 
+            // btn_Print
+            // 
+            this.btn_Print.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_Print.FlatAppearance.BorderSize = 0;
+            this.btn_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Print.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Print.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Print.Image = global::Hotel_App.Properties.Resources.printer__1_;
+            this.btn_Print.Location = new System.Drawing.Point(589, 146);
+            this.btn_Print.Name = "btn_Print";
+            this.btn_Print.Size = new System.Drawing.Size(140, 60);
+            this.btn_Print.TabIndex = 24;
+            this.btn_Print.Text = "  Print";
+            this.btn_Print.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Print.UseVisualStyleBackColor = false;
+            this.btn_Print.Click += new System.EventHandler(this.btn_Print_Click);
+            // 
             // Report_Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 516);
+            this.Controls.Add(this.btn_Print);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -198,5 +219,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_Print;
     }
 }

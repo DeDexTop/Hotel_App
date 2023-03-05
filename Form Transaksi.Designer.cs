@@ -162,6 +162,7 @@
             this.txt_Hari.Name = "txt_Hari";
             this.txt_Hari.Size = new System.Drawing.Size(85, 26);
             this.txt_Hari.TabIndex = 4;
+            this.txt_Hari.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Hari_KeyPress);
             // 
             // label2
             // 
@@ -222,6 +223,7 @@
             this.txt_Uang.Size = new System.Drawing.Size(298, 26);
             this.txt_Uang.TabIndex = 14;
             this.txt_Uang.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Uang_KeyDown);
+            this.txt_Uang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Uang_KeyPress);
             // 
             // label_Kembalian
             // 
@@ -260,6 +262,7 @@
             this.txt_Jumlah.Name = "txt_Jumlah";
             this.txt_Jumlah.Size = new System.Drawing.Size(119, 26);
             this.txt_Jumlah.TabIndex = 18;
+            this.txt_Jumlah.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Jumlah_KeyPress);
             // 
             // label6
             // 

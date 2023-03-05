@@ -20,7 +20,6 @@ C:\Project\Hotel App\bin\Debug\System.Numerics.Vectors.dll
 C:\Project\Hotel App\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Project\Hotel App\bin\Debug\Ubiety.Dns.Core.dll
 C:\Project\Hotel App\bin\Debug\ZstdNet.dll
-C:\Project\Hotel App\bin\Debug\BouncyCastle.Crypto.xml
 C:\Project\Hotel App\bin\Debug\Google.Protobuf.pdb
 C:\Project\Hotel App\bin\Debug\Google.Protobuf.xml
 C:\Project\Hotel App\bin\Debug\K4os.Compression.LZ4.xml
@@ -43,3 +42,5 @@ C:\Project\Hotel App\obj\Debug\Hotel_App.Kasir_Index.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Form_Transaksi.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Report_Form.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Report_Transaksi.resources
+C:\Project\Hotel App\bin\Debug\itextsharp.dll
+C:\Project\Hotel App\bin\Debug\itextsharp.xml
