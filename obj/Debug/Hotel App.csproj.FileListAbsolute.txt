@@ -44,3 +44,5 @@ C:\Project\Hotel App\obj\Debug\Hotel_App.Report_Form.resources
 C:\Project\Hotel App\obj\Debug\Hotel_App.Report_Transaksi.resources
 C:\Project\Hotel App\bin\Debug\itextsharp.dll
 C:\Project\Hotel App\bin\Debug\itextsharp.xml
+C:\Project\Hotel App\obj\Debug\Hotel_App.Owner_Kamar.resources
+C:\Project\Hotel App\obj\Debug\Hotel_App.Owner_Karyawan.resources

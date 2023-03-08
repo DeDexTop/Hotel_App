@@ -113,5 +113,15 @@ namespace Hotel_App
         {
             OpenChildForm(new Report_Transaksi(), panelDesktop, sender);
         }
+
+        private void btnKaryawan_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Owner_Karyawan(), panelDesktop, sender);
+        }
+
+        private void btn_kamar_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Owner_Kamar(), panelDesktop, sender);
+        }
     }
 }

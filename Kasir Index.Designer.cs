@@ -36,6 +36,7 @@
             this.dgv_Detail = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_Id = new System.Windows.Forms.TextBox();
+            this.btn_Batal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_transaksi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Detail)).BeginInit();
             this.SuspendLayout();
@@ -126,11 +127,28 @@
             this.txt_Id.TabIndex = 23;
             this.txt_Id.Visible = false;
             // 
+            // btn_Batal
+            // 
+            this.btn_Batal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Batal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_Batal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Batal.FlatAppearance.BorderSize = 0;
+            this.btn_Batal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Batal.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Batal.Image = global::Hotel_App.Properties.Resources.refresh;
+            this.btn_Batal.Location = new System.Drawing.Point(993, 128);
+            this.btn_Batal.Name = "btn_Batal";
+            this.btn_Batal.Size = new System.Drawing.Size(51, 48);
+            this.btn_Batal.TabIndex = 24;
+            this.btn_Batal.UseVisualStyleBackColor = false;
+            this.btn_Batal.Click += new System.EventHandler(this.btn_Batal_Click);
+            // 
             // Kasir_Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 514);
+            this.Controls.Add(this.btn_Batal);
             this.Controls.Add(this.txt_Id);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgv_Detail);
@@ -159,5 +177,6 @@
         private System.Windows.Forms.DataGridView dgv_Detail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_Id;
+        private System.Windows.Forms.Button btn_Batal;
     }
 }

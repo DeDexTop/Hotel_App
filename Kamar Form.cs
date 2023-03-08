@@ -29,6 +29,7 @@ namespace Hotel_App
         {
             txt_Tipe.Text = string.Empty;
             txt_Harga.Text = string.Empty;
+            txt_Search.Text = string.Empty;
             pb_Kamar.Image = null;
             Show();
         }
@@ -80,7 +81,7 @@ namespace Hotel_App
 
         private void btn_Insert_Click(object sender, EventArgs e)
         {
-            if (txt_Tipe.Text == string.Empty || txt_Harga.Text == string.Empty)
+            if (txt_Tipe.Text == string.Empty || txt_Harga.Text == string.Empty || pb_Kamar.Image == null)
             {
                 MessageBox.Show("Semua Kolom Harus di Isi!");
             }
@@ -100,6 +101,7 @@ namespace Hotel_App
 
         private void dgv_Kamar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgv_Kamar.Rows[e.RowIndex];
@@ -112,11 +114,14 @@ namespace Hotel_App
                 string dir = Path.GetDirectoryName(Application.ExecutablePath);
                 Image image = Image.FromFile(dir + "\\assets\\" + gambar);
                 pb_Kamar.Image = image;
+
+                btn_Insert.Enabled = true;
             }
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
+            btn_Insert.Enabled = true;
             if (txt_Tipe.Text == string.Empty || txt_Harga.Text == string.Empty)
             {
                 MessageBox.Show("Semua Kolom Harus di Isi!");
@@ -131,12 +136,14 @@ namespace Hotel_App
                     MessageBox.Show("Data Berhasil Diubah", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Refresh();
+                    btn_Insert.Enabled = true;
                 }
             }
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
+            
             DialogResult dialogResult = MessageBox.Show("Apakah anda yakin ingin menghapus data ini?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
@@ -151,11 +158,13 @@ namespace Hotel_App
                 MessageBox.Show("Data Berhasil Dihapus", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Refresh();
+                btn_Insert.Enabled = true;
             }
         }
 
         private void btn_Batal_Click(object sender, EventArgs e)
         {
+            btn_Insert.Enabled = true;
             Refresh();
         }
 
@@ -167,7 +176,7 @@ namespace Hotel_App
             }
             else
             {
-                func.ReadData("SELECT id No, tipe_kamar Tipe, harga_per_malam Harga, gambar Gambar FROM tb_kamar WHERE tipe_kamar LIKE '" + txt_Search.Text + "'%", dgv_Kamar);
+                func.ReadData("SELECT id No, tipe_kamar Tipe, harga_per_malam Harga, gambar Gambar FROM tb_kamar WHERE tipe_kamar LIKE '" + txt_Search.Text + "%'", dgv_Kamar);
                 dgv_Kamar.Columns[3].Visible = false;
                 dgv_Kamar.Columns[0].Visible = false;
             }

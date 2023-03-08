@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Hotel_App
 {
@@ -21,6 +22,7 @@ namespace Hotel_App
 
         private void btn_Generate_Click(object sender, EventArgs e)
         {
+            chart_Report.Series[0].Points.Clear();
             string query = "SELECT SUM(`total_bayar`) AS `Total`, `dibuat` FROM tb_transaksi GROUP BY DATE_FORMAT(`dibuat`,'%M') ORDER BY FIELD( DATE_FORMAT(`dibuat`, '%M'), 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');";
             int count = func.GetData(query).Count;
 

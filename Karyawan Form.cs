@@ -25,6 +25,7 @@ namespace Hotel_App
             txt_Nama.Clear();
             txt_Username.Clear();
             txt_Password.Clear();
+            txt_Search.Clear();
             cbx_Role.Text= string.Empty;
             Show();
         }
@@ -41,7 +42,8 @@ namespace Hotel_App
         }
 
         private void dgv_Karyawan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        { 
+        {
+            btn_Insert.Enabled = false;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgv_Karyawan.Rows[e.RowIndex];
@@ -70,6 +72,7 @@ namespace Hotel_App
                     MessageBox.Show("Data Berhasil Ditambahkan", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Refresh();
+                    btn_Insert.Enabled = true;
                 }
             }
         }
@@ -91,12 +94,13 @@ namespace Hotel_App
                     MessageBox.Show("Data Berhasil Diubah", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Refresh();
+                    btn_Insert.Enabled = true;
                 }
             }
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
-        {
+        { 
             DialogResult dialogResult = MessageBox.Show("Apakah anda yakin ingin menghapus data ini?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
@@ -106,11 +110,13 @@ namespace Hotel_App
                 MessageBox.Show("Data Berhasil Dihapus", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Refresh();
+                btn_Insert.Enabled = true;
             }
         }
 
         private void btn_Batal_Click(object sender, EventArgs e)
         {
+            btn_Insert.Enabled = true;
             Refresh();
         }
 

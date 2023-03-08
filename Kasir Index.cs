@@ -48,5 +48,14 @@ namespace Hotel_App
 
             func.ReadData("SELECT tb_kamar.tipe_kamar TipeKamar, detail_transaksi.jumlah_kamar Jumlah, detail_transaksi.checkin CheckIn, detail_transaksi.checkout Checkout FROM detail_transaksi JOIN tb_kamar ON detail_transaksi.id_kamar = tb_kamar.id WHERE detail_transaksi.id_transaksi = '" + txt_Id.Text + "'", dgv_Detail);
         }
+
+        private void btn_Batal_Click(object sender, EventArgs e)
+        {
+            func.ReadData("SELECT id No, nama_pelanggan Nama, kode_transaksi Kode, jumlah_kamar_dipesan JumlahKamar, total_bayar Tagihan FROM tb_transaksi", dgv_transaksi);
+            dgv_transaksi.Columns[0].Visible = false;
+            dgv_Detail.DataSource = null;
+            txt_Search.Text = string.Empty;
+            txt_Id.Text = string.Empty;
+        }
     }
 }

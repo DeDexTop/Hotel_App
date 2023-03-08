@@ -100,6 +100,18 @@
       <DependentUpon>Admin Form.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassData.cs" />
+    <Compile Include="Owner Kamar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner Kamar.Designer.cs">
+      <DependentUpon>Owner Kamar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Owner Karyawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner Karyawan.Designer.cs">
+      <DependentUpon>Owner Karyawan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +177,12 @@
     </Compile>
     <EmbeddedResource Include="Admin Form.resx">
       <DependentUpon>Admin Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner Kamar.resx">
+      <DependentUpon>Owner Kamar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner Karyawan.resx">
+      <DependentUpon>Owner Karyawan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Form.resx">
       <DependentUpon>Report Form.cs</DependentUpon>
@@ -306,6 +324,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

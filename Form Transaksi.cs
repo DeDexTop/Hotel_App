@@ -224,15 +224,14 @@ namespace Hotel_App
 
         private void btn_Bayar_Click(object sender, EventArgs e)
         {
-            int uang = Convert.ToInt32(txt_Uang.Text);
-            int total = Convert.ToInt32(Harga());
-
             if (txt_Uang.Text == string.Empty)
             {
                 MessageBox.Show("Kolom data tida boleh kosong", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                int uang = Convert.ToInt32(txt_Uang.Text);
+                int total = Convert.ToInt32(Harga());
                 if (uang < total)
                 {
                     MessageBox.Show("Uang yang di masukan kurang");
@@ -356,9 +355,9 @@ namespace Hotel_App
 
             e.Graphics.DrawString(" Hotel Nesas ", heading, Brushes.Black, 350, 10);
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------", font, Brushes.Black, 130, 30);
-            e.Graphics.DrawString("Pelanggan : " + nama + " ", font, Brushes.Black, 130, 80);
-            e.Graphics.DrawString("Tanggal : " + DateTime.Now.ToShortDateString() + "", font, Brushes.Black, 130, 110);
-            e.Graphics.DrawString("Kode Transaksi : " + kode + " ", font, Brushes.Black, 130,  140);
+            e.Graphics.DrawString("Pelanggan      : \t" + nama + " ", font, Brushes.Black, 130, 80);
+            e.Graphics.DrawString("Tanggal        : \t" + DateTime.Now.ToShortDateString() + "", font, Brushes.Black, 130, 110);
+            e.Graphics.DrawString("Kode Transaksi : \t" + kode + " ", font, Brushes.Black, 130,  140);
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------", font, Brushes.Black, 130, 180);
             int x = 0;
             int x1 = 210;

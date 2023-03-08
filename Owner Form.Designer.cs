@@ -39,6 +39,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
+            this.btnKaryawan = new System.Windows.Forms.Button();
+            this.btn_kamar = new System.Windows.Forms.Button();
             this.btn_Transaksi = new System.Windows.Forms.Button();
             this.btnKamar = new System.Windows.Forms.Button();
             this.btnLog = new System.Windows.Forms.Button();
@@ -117,6 +119,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnKaryawan);
+            this.panelMenu.Controls.Add(this.btn_kamar);
             this.panelMenu.Controls.Add(this.btn_Transaksi);
             this.panelMenu.Controls.Add(this.btnKamar);
             this.panelMenu.Controls.Add(this.btnLog);
@@ -168,6 +172,48 @@
             this.btnOpen.TabIndex = 1;
             this.btnOpen.UseVisualStyleBackColor = false;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // btnKaryawan
+            // 
+            this.btnKaryawan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKaryawan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKaryawan.FlatAppearance.BorderSize = 0;
+            this.btnKaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKaryawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKaryawan.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnKaryawan.Image = ((System.Drawing.Image)(resources.GetObject("btnKaryawan.Image")));
+            this.btnKaryawan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKaryawan.Location = new System.Drawing.Point(0, 322);
+            this.btnKaryawan.Name = "btnKaryawan";
+            this.btnKaryawan.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnKaryawan.Size = new System.Drawing.Size(244, 60);
+            this.btnKaryawan.TabIndex = 5;
+            this.btnKaryawan.Text = "   Karyawan";
+            this.btnKaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKaryawan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKaryawan.UseVisualStyleBackColor = true;
+            this.btnKaryawan.Click += new System.EventHandler(this.btnKaryawan_Click);
+            // 
+            // btn_kamar
+            // 
+            this.btn_kamar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_kamar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_kamar.FlatAppearance.BorderSize = 0;
+            this.btn_kamar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_kamar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_kamar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_kamar.Image = ((System.Drawing.Image)(resources.GetObject("btn_kamar.Image")));
+            this.btn_kamar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_kamar.Location = new System.Drawing.Point(0, 262);
+            this.btn_kamar.Name = "btn_kamar";
+            this.btn_kamar.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btn_kamar.Size = new System.Drawing.Size(244, 60);
+            this.btn_kamar.TabIndex = 4;
+            this.btn_kamar.Text = "   Kamar";
+            this.btn_kamar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_kamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_kamar.UseVisualStyleBackColor = true;
+            this.btn_kamar.Click += new System.EventHandler(this.btn_kamar_Click);
             // 
             // btn_Transaksi
             // 
@@ -288,5 +334,7 @@
         private System.Windows.Forms.Button btnKamar;
         private System.Windows.Forms.Button btnLog;
         private System.Windows.Forms.Button btn_Transaksi;
+        private System.Windows.Forms.Button btn_kamar;
+        private System.Windows.Forms.Button btnKaryawan;
     }
 }
