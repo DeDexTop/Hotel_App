@@ -40,7 +40,7 @@ namespace Hotel_App
             int total = 0;
             for (int i = 0; i < dgv_Transaksi.Rows.Count; ++i)
             {
-                total += Convert.ToInt32(dgv_Transaksi.Rows[i].Cells[6].Value);
+                total += Convert.ToInt32(dgv_Transaksi.Rows[i].Cells[7].Value);
             }
             return total.ToString();
         }
@@ -73,13 +73,20 @@ namespace Hotel_App
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            if(txt_Search.Text == string.Empty)
+            if(dt_Tanggal2.Value.Date < dt_Tanggal.Value.Date)
             {
-                SearchTanggal();
+                MessageBox.Show("Tanggal yang dimasukan tidak benar");
             }
             else
             {
-                Search();
+                if (txt_Search.Text == string.Empty)
+                {
+                    SearchTanggal();
+                }
+                else
+                {
+                    Search();
+                }
             }
         }
 

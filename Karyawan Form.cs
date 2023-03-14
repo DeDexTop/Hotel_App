@@ -128,7 +128,7 @@ namespace Hotel_App
             }
             else
             {
-                func.ReadData("SELECT id No, nama Nama, username Username, password Password, role Peran FROM user WHERE nama Like '" + txt_Search.Text + "'%", dgv_Karyawan);
+                func.ReadData("SELECT id No, nama Nama, username Username, password Password, role Peran FROM user WHERE nama Like '" + txt_Search.Text + "%'", dgv_Karyawan);
                 dgv_Karyawan.Columns[0].Visible = false;
             }
         }

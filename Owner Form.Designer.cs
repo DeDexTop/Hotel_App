@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Owner_Form));
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.btnKaryawan = new System.Windows.Forms.Button();
             this.btn_kamar = new System.Windows.Forms.Button();
             this.btn_Transaksi = new System.Windows.Forms.Button();
             this.btnKamar = new System.Windows.Forms.Button();
             this.btnLog = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.panelDesktop.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -60,6 +60,15 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(978, 576);
             this.panelDesktop.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Image = global::Hotel_App.Properties.Resources.ceo__1_;
+            this.label4.Location = new System.Drawing.Point(336, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(353, 275);
+            this.label4.TabIndex = 1;
             // 
             // label3
             // 
@@ -96,50 +105,6 @@
             this.panelTitleBar.Size = new System.Drawing.Size(978, 82);
             this.panelTitleBar.TabIndex = 7;
             // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.label2);
-            this.panelLogo.Controls.Add(this.buttonClose);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(244, 82);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(92, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "MENU";
-            // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.btnKaryawan);
-            this.panelMenu.Controls.Add(this.btn_kamar);
-            this.panelMenu.Controls.Add(this.btn_Transaksi);
-            this.panelMenu.Controls.Add(this.btnKamar);
-            this.panelMenu.Controls.Add(this.btnLog);
-            this.panelMenu.Controls.Add(this.panelLogo);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(244, 658);
-            this.panelMenu.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.Image = global::Hotel_App.Properties.Resources.ceo__1_;
-            this.label4.Location = new System.Drawing.Point(336, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(353, 275);
-            this.label4.TabIndex = 1;
-            // 
             // btn_Logout
             // 
             this.btn_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -172,6 +137,54 @@
             this.btnOpen.TabIndex = 1;
             this.btnOpen.UseVisualStyleBackColor = false;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.label2);
+            this.panelLogo.Controls.Add(this.buttonClose);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(244, 82);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(92, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "MENU";
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
+            this.buttonClose.Location = new System.Drawing.Point(12, 15);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(52, 48);
+            this.buttonClose.TabIndex = 0;
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnKaryawan);
+            this.panelMenu.Controls.Add(this.btn_kamar);
+            this.panelMenu.Controls.Add(this.btn_Transaksi);
+            this.panelMenu.Controls.Add(this.btnKamar);
+            this.panelMenu.Controls.Add(this.btnLog);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(244, 658);
+            this.panelMenu.TabIndex = 6;
             // 
             // btnKaryawan
             // 
@@ -277,19 +290,6 @@
             this.btnLog.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLog.UseVisualStyleBackColor = true;
             this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonClose.FlatAppearance.BorderSize = 0;
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
-            this.buttonClose.Location = new System.Drawing.Point(12, 15);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(52, 48);
-            this.buttonClose.TabIndex = 0;
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // Owner_Form
             // 

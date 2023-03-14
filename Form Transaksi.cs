@@ -127,46 +127,50 @@ namespace Hotel_App
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            if (cbx_Tipe.Text == string.Empty || txt_Jumlah.Text == string.Empty || txt_Hari.Text == string.Empty)
+            if(dt_Checkin.Value.Date < DateTime.Now)
             {
-                MessageBox.Show("Pilih tipe kamar, jumlah kamar, dan jumlah hari terlebih dahulu!");
+                MessageBox.Show("Tanggal yang dimasukan tidak benar");
             }
-
-
             else
             {
-                DataRowCollection col = func.GetData("SELECT harga_per_malam, id FROM tb_kamar WHERE tipe_kamar = '" + cbx_Tipe.Text + "'");
-                foreach (DataRow dr in col)
+                if (cbx_Tipe.Text == string.Empty || txt_Jumlah.Text == string.Empty || txt_Hari.Text == string.Empty)
                 {
-                    harga = Convert.ToInt32(dr["harga_per_malam"]);
-                    id_kamar = Convert.ToInt32(dr["id"]);
+                    MessageBox.Show("Pilih tipe kamar, jumlah kamar, dan jumlah hari terlebih dahulu!");
                 }
-
-                total = harga * Convert.ToInt32(txt_Jumlah.Text) * Convert.ToInt32(txt_Hari.Text);
-
-                bool found = false;
-                if (dgv_Kamar.Rows.Count >= 0)
+                else
                 {
-                    if (!found)
+                    DataRowCollection col = func.GetData("SELECT harga_per_malam, id FROM tb_kamar WHERE tipe_kamar = '" + cbx_Tipe.Text + "'");
+                    foreach (DataRow dr in col)
+                    {
+                        harga = Convert.ToInt32(dr["harga_per_malam"]);
+                        id_kamar = Convert.ToInt32(dr["id"]);
+                    }
+
+                    total = harga * Convert.ToInt32(txt_Jumlah.Text) * Convert.ToInt32(txt_Hari.Text);
+
+                    bool found = false;
+                    if (dgv_Kamar.Rows.Count >= 0)
+                    {
+                        if (!found)
+                        {
+                            dgv_Kamar.Rows.Add(id_kamar, cbx_Tipe.Text, harga.ToString(), txt_Jumlah.Text, dt_Checkin.Value.ToString(), txt_Hari.Text, total);
+
+                            LabelHarga();
+                        }
+                    }
+                    else
                     {
                         dgv_Kamar.Rows.Add(id_kamar, cbx_Tipe.Text, harga.ToString(), txt_Jumlah.Text, dt_Checkin.Value.ToString(), txt_Hari.Text, total);
 
                         LabelHarga();
                     }
-                }
-                else
-                {
-                    dgv_Kamar.Rows.Add(id_kamar, cbx_Tipe.Text, harga.ToString(), txt_Jumlah.Text, dt_Checkin.Value.ToString(), txt_Hari.Text, total);
 
-                    LabelHarga();
+                    txt_Hari.Text = string.Empty;
+                    txt_Jumlah.Text = string.Empty;
+                    cbx_Tipe.SelectedItem = null;
+                    pb_Gambar.Image = null;
                 }
-
-                txt_Hari.Text = string.Empty;
-                txt_Jumlah.Text = string.Empty;
-                cbx_Tipe.SelectedItem = null;
-                pb_Gambar.Image = null;
             }
-
         }
 
         private void btn_Simpan_Click(object sender, EventArgs e)
